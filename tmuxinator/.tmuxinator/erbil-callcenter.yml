@@ -1,0 +1,6 @@
+name: erbil
+root: ~
+
+windows:
+  - vagrant: cd ~/Code/erbil-callcenter; and vagrant up; and vagrant ssh -c "tmux"
+  - editor: cd ~/Code/erbil-callcenter/callcenter/schedule

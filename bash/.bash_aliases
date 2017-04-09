@@ -1,0 +1,20 @@
+alias install="sudo dnf install"
+alias search="dnf search"
+alias remove="sudo dnf remove"
+alias update="sudo dnf update"
+
+alias ls="ls --color=auto -l"
+alias rm="rm -I --preserve-root"
+alias mv="mv -i"
+alias cp="cp -i"
+alias ln="ln -i"
+
+alias shutdown="sudo shutdown now"
+alias reboot="sudo shutdown -r now"
+
+alias status="systemctl status"
+alias start="systemctl start"
+alias restart="systemctl restart"
+alias stop="systemctl stop"
+alias enable="systemctl enable"
+alias disable="systemctl disable"
