@@ -17,6 +17,9 @@ Plugin 'tpope/vim-surround'
 Plugin 'godlygeek/csapprox'
 Plugin 'NLKNguyen/papercolor-theme'
 
+call vundle#end()
+filetype plugin indent on
+
 "colors
 colorscheme PaperColor
 set background=dark
