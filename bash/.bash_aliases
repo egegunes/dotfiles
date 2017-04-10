@@ -27,7 +27,17 @@ alias vres="vagrant resume"
 alias vs="vagrant status"
 alias vgs="vagrant global-status"
 
+alias ga="git add"
+alias gc="git commit"
+alias gd="git diff"
+alias gs="git status"
+alias gl="git log"
+alias gp="git push"
+
 alias vim="vimx"
 
 alias importFromWeb="curl -H 'application/json' -X POST --data @import.json localhost:8000/importFromWeb/"
 alias cancelFromWeb="curl -H 'application/json' -X POST --data @cancel.json localhost:8000/cancelFromWeb/"
+
+DATE=$(date +%d-%m-%Y)
+alias todo="vim /home/egegunes/Dropbox/todo/${DATE}.txt"
