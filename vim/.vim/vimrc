@@ -107,9 +107,7 @@ function! s:asciidoc()
 endfunction
 
 "undo settings
-set undolevels=1000
-set undodir^=$HOME/.vim/undo//
-set undofile
+set noundofile
 
 set noswapfile
 
