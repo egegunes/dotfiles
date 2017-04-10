@@ -2,6 +2,6 @@ name: randevu
 root: ~
 
 windows:
-  - vagrant: cd  ~/Code/randevu-backend; and vagrant up; and vagrant ssh -c "tmux"
+  - vagrant: cd  ~/Code/randevu-backend && vagrant up && vagrant ssh -c "tmux"
   - frontend: cd ~/Code/randevu-frontend
   - backend: cd ~/Code/randevu-backend/Code/randevuApi/
