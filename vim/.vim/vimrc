@@ -16,12 +16,13 @@ Plugin 'henrik/vim-indexed-search'
 Plugin 'tpope/vim-surround'
 Plugin 'godlygeek/csapprox'
 Plugin 'NLKNguyen/papercolor-theme'
+Plugin 'sjl/badwolf'
 
 call vundle#end()
 filetype plugin indent on
 
 "colors
-colorscheme PaperColor
+colorscheme badwolf
 set background=dark
 set t_Co=256
 
@@ -99,7 +100,6 @@ set lazyredraw
 au BufNewFile,BufRead *.adoc call s:asciidoc()
 
 function! s:asciidoc()
-    colorscheme jellybeans
     set syntax=asciidoc
     set filetype=asciidoc
     set tw=79 
