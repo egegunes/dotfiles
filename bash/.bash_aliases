@@ -4,7 +4,7 @@ alias remove="sudo dnf remove"
 alias update="sudo dnf update"
 
 alias rm="rm -Iv --preserve-root"
-alias ls="ls --color=auto --group-directories-first -lA"
+alias ls="ls --color=auto --group-directories-first -lhA"
 alias mv="mv -vi"
 alias cp="cp -vi"
 alias ln="ln -vi"
