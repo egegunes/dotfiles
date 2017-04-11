@@ -41,3 +41,5 @@ alias cancelFromWeb="curl -H 'application/json' -X POST --data @cancel.json loca
 
 DATE=$(date +%d-%m-%Y)
 alias todo="vim /home/egegunes/Dropbox/todo/${DATE}.txt"
+YESTERDAY=$(date -d "yesterday" +%d-%m-%Y)
+alias yesterdaytodo="less /home/egegunes/Dropbox/todo/${YESTERDAY}.txt"
