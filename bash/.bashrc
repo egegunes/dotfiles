@@ -8,6 +8,10 @@ if [ -f $HOME/.bash_aliases ]; then
     . $HOME/.bash_aliases
 fi
 
+if [ -f $HOME/.bash_prompt ]; then
+    . $HOME/.bash_prompt
+fi
+
 shopt -s autocd
 shopt -s extglob
 
@@ -15,6 +19,6 @@ stty -ixon
 
 set -o vi
 
-source $HOME/.bash_prompt
 export HISTCONTROL=ignoreboth:erasedups
+
 export EDITOR="vim"
