@@ -31,7 +31,7 @@ alias ga="git add"
 alias gc="git commit"
 alias gd="git diff"
 alias gs="git status"
-alias gl="git log"
+alias gl="git glog"
 alias gp="git push"
 
 alias vim="vimx"
