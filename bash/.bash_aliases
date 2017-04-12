@@ -33,6 +33,7 @@ alias gd="git diff"
 alias gs="git status"
 alias gl="git glog"
 alias gp="git push"
+alias gf="git fetch --all"
 
 alias vim="vimx"
 
