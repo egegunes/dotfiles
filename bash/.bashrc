@@ -20,5 +20,11 @@ stty -ixon
 set -o vi
 
 export HISTCONTROL=ignoreboth:erasedups
+export HISTSIZE=5000
+export HISTFILESIZE=10000
+
+shopt -s histappend
+
+export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
 export EDITOR="vim"
