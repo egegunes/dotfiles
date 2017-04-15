@@ -167,6 +167,8 @@ nnoremap <silent> k gk
 nnoremap <silent> 0 g0
 nnoremap <silent> $ g$
 
+nnoremap <silent> B ge
+
 nnoremap <C-e> :Lexplore<CR>
 
 nnoremap J <C-e>
