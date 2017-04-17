@@ -144,6 +144,9 @@ set statusline+=%{fugitive#statusline()}
 
 set statusline+=%=(%l/%L):%v\ %P
 
+set noerrorbells visualbell t_vb=
+autocmd GUIEnter * set visualbell t_vb=
+
 "FLAKE8
 let g:flake8_cmd="/usr/bin/flake8-3"
 
