@@ -224,6 +224,7 @@ cmap W w !sudo tee % >/dev/null
 function! FormatBadChars()
     execute '%s/Ģ/ş/g'
     execute '%s/Ġ/İ/g'
+    execute '%s/ġ/Ş/g'
 endfunction
 
 " ABBREVIATIONS
