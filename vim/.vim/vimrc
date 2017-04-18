@@ -236,5 +236,5 @@ func Eatchar(pat)
 endfunc
 
 " ABBREVIATIONS
-iabbr cnslg console.log();
+iabbr cnslg console.log();jkhi<C-R>=Eatchar('\s')<CR>
 iabbr ipdb import ipdb; ipdb.set_trace()<C-R>=Eatchar('\s')<CR>
