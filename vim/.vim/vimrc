@@ -231,5 +231,5 @@ function! FormatBadChars()
 endfunction
 
 " ABBREVIATIONS
-abbr cnslg console.log();
-abbr ipdb import ipdb; ipdb.set_trace()
+iabbr cnslg console.log();
+iabbr ipdb import ipdb; ipdb.set_trace()
