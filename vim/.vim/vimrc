@@ -230,6 +230,11 @@ function! FormatBadChars()
     execute '%s/ġ/Ş/g'
 endfunction
 
+func Eatchar(pat)
+  let c = nr2char(getchar(0))
+  return (c =~ a:pat) ? '' : c
+endfunc
+
 " ABBREVIATIONS
 iabbr cnslg console.log();
-iabbr ipdb import ipdb; ipdb.set_trace()
+iabbr ipdb import ipdb; ipdb.set_trace()<C-R>=Eatchar('\s')<CR>
