@@ -15,8 +15,8 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'henrik/vim-indexed-search'
 Plugin 'tpope/vim-surround'
 Plugin 'godlygeek/csapprox'
-Plugin 'NLKNguyen/papercolor-theme'
 Plugin 'sjl/badwolf'
+Plugin 'jlanzarotta/bufexplorer'
 
 call vundle#end()
 filetype plugin indent on
