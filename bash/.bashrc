@@ -24,6 +24,7 @@ shopt -s histappend
 
 stty -ixon
 
+export XDG_CURRENT_DESKTOP=Unity
 export EDITOR="vim"
 export HISTCONTROL=ignoreboth:erasedups
 export HISTSIZE=5000
