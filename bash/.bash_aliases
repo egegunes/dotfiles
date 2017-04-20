@@ -1,7 +1,8 @@
-alias install="sudo dnf install"
-alias search="dnf search"
-alias remove="sudo dnf remove"
-alias update="sudo dnf update"
+alias install="sudo apt install"
+alias search="apt search"
+alias remove="sudo apt remove"
+alias update="sudo apt update"
+alias upgrade="sudo apt upgrade"
 
 alias rm="rm -Iv --preserve-root"
 alias ls="ls --color=auto --group-directories-first -lhA"
@@ -34,8 +35,6 @@ alias gs="git status"
 alias gl="git glog"
 alias gp="git push"
 alias gf="git fetch --all"
-
-alias vim="vimx"
 
 alias importFromWeb="curl -H 'application/json' -X POST --data @import.json localhost:8000/importFromWeb/"
 alias cancelFromWeb="curl -H 'application/json' -X POST --data @cancel.json localhost:8000/cancelFromWeb/"
