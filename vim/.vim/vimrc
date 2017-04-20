@@ -42,10 +42,6 @@ set relativenumber
 "show current line number
 set number
 
-"display tabs and trailing spaces
-set list
-set listchars=tab:▷⋅,trail:⋅,nbsp:⋅
-
 "find the next match as we type the search
 set incsearch
 "highlight searches by default
