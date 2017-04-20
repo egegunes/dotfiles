@@ -26,4 +26,3 @@ export HISTSIZE=5000
 export HISTFILESIZE=10000
 export PATH=$PATH:$HOME/.local/bin:$HOME/bin
 export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
-export LC_ALL="C"
