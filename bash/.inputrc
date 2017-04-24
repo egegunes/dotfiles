@@ -3,10 +3,10 @@ set editing-mode vi
 
 $if mode=vi
     set keymap vi-command
-    Control-l: clear-screen
+    Control-o: clear-screen
 
     set keymap vi-insert
-    Control-l: clear-screen
+    Control-o: clear-screen
     Control-e: end-of-line
     Control-a: beginning-of-line
     "jk": vi-movement-mode
