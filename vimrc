@@ -17,6 +17,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'godlygeek/csapprox'
 Plugin 'sjl/badwolf'
 Plugin 'jlanzarotta/bufexplorer'
+Plugin 'christoomey/vim-tmux-navigator'
 
 call vundle#end()
 filetype plugin indent on
