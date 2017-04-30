@@ -5,7 +5,7 @@ alias update="sudo apt update"
 alias upgrade="sudo apt upgrade"
 
 alias rm="rm -Iv --preserve-root"
-alias ls="ls --color=auto --group-directories-first -lhA"
+alias ls="ls --color=auto --group-directories-first -lh"
 alias mv="mv -vi"
 alias cp="cp -vi"
 alias ln="ln -vi"
