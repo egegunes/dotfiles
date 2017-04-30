@@ -1,14 +1,22 @@
 set bell-style none
 set editing-mode vi
+set show-mode-in-prompt on
+set show-all-if-ambiguous on
+set completion-ignore-case on
+set completion-map-case on
+set menu-complete-display-prefix on
+set colored-stats on
+set colored-completion-prefix on
 
-$if mode=vi
-    set keymap vi-command
-    Control-o: clear-screen
+set keymap vi-command
+"cl": clear-screen
+"n": accept-line
+"m": reverse-search-history
+"p": yank-last-arg
+"o": "i !!\r"
 
-    set keymap vi-insert
-    Control-o: clear-screen
-    Control-e: end-of-line
-    Control-a: beginning-of-line
-    "jk": vi-movement-mode
-$endif
-
+set keymap vi-insert
+Control-e: end-of-line
+Control-a: beginning-of-line
+"jk": vi-movement-mode
+"p": self-insert
