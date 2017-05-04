@@ -1,9 +1,3 @@
-alias install="sudo apt install"
-alias search="apt search"
-alias remove="sudo apt remove"
-alias update="sudo apt update"
-alias upgrade="sudo apt upgrade"
-
 alias rm="rm -Iv --preserve-root"
 alias ls="ls --color=auto --group-directories-first -lh"
 alias mv="mv -vi"
