@@ -33,9 +33,6 @@ alias gf="git fetch --all"
 alias importFromWeb="curl -H 'application/json' -X POST --data @import.json localhost:8000/importFromWeb/"
 alias cancelFromWeb="curl -H 'application/json' -X POST --data @cancel.json localhost:8000/cancelFromWeb/"
 
-DATE=$(date +%d-%m-%Y)
-alias todo="vim /home/egegunes/Dropbox/todo/${DATE}.txt"
-YESTERDAY=$(date -d "yesterday" +%d-%m-%Y)
-alias yesterdaytodo="less /home/egegunes/Dropbox/todo/${YESTERDAY}.txt"
+alias t='todo.sh -d $HOME/Dropbox/todo/todo.cfg'
 
 alias simplehttp="python -m SimpleHTTPServer"
