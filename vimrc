@@ -73,6 +73,9 @@ set wildmenu                "enable ctrl-n and ctrl-p to scroll thru matches
 
 set formatoptions-=o "dont continue comments when pushing o/O
 
+" show json quotes, what an annoying problem!
+au BufNewFile,BufRead *.json set syntax=off
+
 "vertical/horizontal scroll off settings
 set scrolloff=3
 set sidescrolloff=7
