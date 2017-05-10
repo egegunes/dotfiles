@@ -2,5 +2,5 @@ name: callcenter
 root: ~
 
 windows:
-  - vagrant: cd ~/Code/callcenter && vagrant up && vagrant ssh -c "tmux"
+  - vagrant: cd ~/Code/callcenter
   - editor: cd ~/Code/callcenter/schedule
