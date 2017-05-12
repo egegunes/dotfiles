@@ -1,7 +1,6 @@
 # SOURCE FILES
 
 [ -f /etc/bashrc ] && source /etc/bashrc
-[ -f $HOME/.bash_aliases ] && source $HOME/.bash_aliases
 [ -f /usr/share/git-core/contrib/completion/git-prompt.sh ] && source /usr/share/git-core/contrib/completion/git-prompt.sh
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
