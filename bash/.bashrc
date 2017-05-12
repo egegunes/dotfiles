@@ -1,20 +1,11 @@
-# Source global definitions
-if [ -f /etc/bashrc ]; then
-    . /etc/bashrc
-fi
+# SOURCE FILES
 
-# Source user definitions
-if [ -f $HOME/.bash_aliases ]; then
-    . $HOME/.bash_aliases
-fi
+[ -f /etc/bashrc ] && source /etc/bashrc
+[ -f $HOME/.bash_aliases ] && source $HOME/.bash_aliases
+[ -f /usr/share/git-core/contrib/completion/git-prompt.sh ] && source /usr/share/git-core/contrib/completion/git-prompt.sh
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
-if [ -f $HOME/.bash_prompt ]; then
-    . $HOME/.bash_prompt
-fi
-
-if [ -f /usr/share/git-core/contrib/completion/git-prompt.sh ]; then
-    . /usr/share/git-core/contrib/completion/git-prompt.sh
-fi
+# OPTIONS
 
 set -o vi
 
@@ -23,6 +14,8 @@ shopt -s extglob
 shopt -s histappend
 
 stty -ixon
+
+# ENVIRONMENT VARIABLES
 
 export EDITOR="vim"
 export HISTCONTROL=ignoreboth:erasedups
@@ -38,4 +31,3 @@ export TODOTXT_SORT_COMMAND='env LC_COLLATE=C sort -k 2,2 -k 1,1n'
 
 complete -F _todo t
 
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
