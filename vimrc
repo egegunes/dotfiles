@@ -97,6 +97,10 @@ set showmatch
 "it's good for performance, but idk how
 set lazyredraw
 
+"show tabs and trailing whitespaces
+set list!
+set listchars=tab:»·,trail:·
+
 au BufNewFile,BufRead *.adoc call s:asciidoc()
 
 function! s:asciidoc()
