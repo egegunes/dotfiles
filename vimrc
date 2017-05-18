@@ -224,6 +224,8 @@ map <C-l> <C-w>l
 
 cmap W w !sudo tee % >/dev/null
 
+nnoremap <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
+
 function! FormatBadChars()
     execute '%s/Ģ/ş/g'
     execute '%s/Ġ/İ/g'
