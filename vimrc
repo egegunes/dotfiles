@@ -151,6 +151,8 @@ set statusline+=%=(%l/%L):%v\ %P
 set noerrorbells visualbell t_vb=
 autocmd GUIEnter * set visualbell t_vb=
 
+set wildchar=<Tab> wildmenu wildmode=full
+
 "FLAKE8
 let g:flake8_cmd="/usr/bin/flake8-3"
 
@@ -176,7 +178,7 @@ nnoremap <silent> $ g$
 
 nnoremap <silent> B ge
 
-nnoremap <C-e> :Lexplore<CR>
+nnoremap <C-e> :call RangerExplorer()<CR>
 
 nnoremap J <C-e>
 nnoremap K <C-y>
@@ -240,6 +242,15 @@ func! Eatchar(pat)
   let c = nr2char(getchar(0))
   return (c =~ a:pat) ? '' : c
 endfunc
+
+function! RangerExplorer()
+    exec "silent !ranger --choosefile=/tmp/vim_ranger_current_file " . expand("%:p:h")
+    if filereadable('/tmp/vim_ranger_current_file')
+        exec 'edit ' . system('cat /tmp/vim_ranger_current_file')
+        call system('rm /tmp/vim_ranger_current_file')
+    endif
+    redraw!
+endfun
 
 " ABBREVIATIONS
 iabbr cnslg console.log();jkhi<C-R>=Eatchar('\s')<CR>
