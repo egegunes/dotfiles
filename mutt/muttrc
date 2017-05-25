@@ -1,0 +1,41 @@
+set editor                      = 'vim + -c "set textwidth=72" -c "set wrap"'
+
+set header_cache                = ~/.mutt/cache/headercache
+set message_cachedir            = ~/.mutt/cache/messagecache
+set certificate_file            = ~/.mutt/certificates
+set mailcap_path                = ~/.mutt/mailcap
+set tmpdir                      = ~/.mutt/tmp
+
+auto_view                       text/html
+alternative_order               text/plain text/html *
+
+set sort                        = 'threads'
+set sort_aux                    = 'reverse-last-date-received'
+
+set pager_index_lines           = 15
+
+set move                        = no
+set delete                      = ask-yes
+set mark_old                    = no
+set include
+
+set attribution="* %n <%a> [%{%Y-%m-%d %H:%M:%S %Z}]:\n"
+
+set abort_nosubject             = ask-yes
+set abort_unmodified            = yes
+
+set content_type                = 'text/plain'
+set edit_headers
+
+set timeout                     = 30
+
+source ~/.mutt/include/colors
+source ~/.mutt/include/headers
+source ~/.mutt/include/keybindings
+
+source "gpg2 -dq $HOME/.mutt/accounts/ege@artistanbul.io/pass.gpg |"
+
+source ~/.mutt/accounts/ege@artistanbul.io/imap
+source ~/.mutt/accounts/ege@artistanbul.io/ident
+source ~/.mutt/accounts/ege@artistanbul.io/smtp
+
