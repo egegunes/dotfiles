@@ -10,13 +10,11 @@ Plugin 'Raimondi/delimitMate'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'Yggdroot/indentLine'
 Plugin 'scrooloose/nerdcommenter'
-Plugin 'nvie/vim-flake8'
 Plugin 'tpope/vim-fugitive'
 Plugin 'henrik/vim-indexed-search'
 Plugin 'tpope/vim-surround'
 Plugin 'godlygeek/csapprox'
 Plugin 'sjl/badwolf'
-Plugin 'jlanzarotta/bufexplorer'
 Plugin 'christoomey/vim-tmux-navigator'
 
 call vundle#end()
@@ -152,9 +150,6 @@ set noerrorbells visualbell t_vb=
 autocmd GUIEnter * set visualbell t_vb=
 
 set wildchar=<Tab> wildmenu wildmode=full
-
-"FLAKE8
-let g:flake8_cmd="/usr/bin/flake8-3"
 
 "MAPPINGS
 let mapleader="\<Space>"
