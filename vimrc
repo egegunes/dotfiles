@@ -178,6 +178,10 @@ nnoremap <C-e> :call RangerExplorer()<CR>
 nnoremap J <C-e>
 nnoremap K <C-y>
 
+nnoremap L :bprevious<CR>
+nnoremap H :bnext<CR>
+nnoremap <leader>d :bdelete<CR>
+
 " highlight last inserted text
 noremap gV `[v`]
 
