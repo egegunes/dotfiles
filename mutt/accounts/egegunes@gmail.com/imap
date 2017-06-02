@@ -1,6 +1,0 @@
-set imap_user = "egegunes@gmail.com"
-set imap_pass = $my_personal_pass
-set folder = "imaps://imap.gmail.com:993"
-set spoolfile = "+INBOX"
-set postponed = "+Drafts"
-set record = "+"

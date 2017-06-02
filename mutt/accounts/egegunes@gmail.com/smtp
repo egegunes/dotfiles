@@ -1,3 +1,0 @@
-set ssl_starttls = yes
-set smtp_url = "smtp://egegunes@smtp.gmail.com:587/"
-set smtp_pass = $my_personal_pass

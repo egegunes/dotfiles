@@ -1,6 +1,0 @@
-set imap_user = "ege@artistanbul.io"
-set imap_pass = $my_work_pass
-set folder = "imaps://imap.gmail.com:993"
-set spoolfile = "+INBOX"
-set postponed = "+Drafts"
-set record = "+Sent"
