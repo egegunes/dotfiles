@@ -99,6 +99,7 @@ alias gs="git status"
 alias gl="git glog"
 alias gp="git push"
 alias gf="git fetch --all"
+alias gh="git show HEAD"
 
 alias importFromWeb="curl -H 'application/json' -X POST --data @import.json localhost:8000/importFromWeb/"
 alias cancelFromWeb="curl -H 'application/json' -X POST --data @cancel.json localhost:8000/cancelFromWeb/"
