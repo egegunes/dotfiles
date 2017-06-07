@@ -159,6 +159,8 @@ nnoremap <leader>w :w<CR>
 nnoremap <leader>q :q<CR>
 nnoremap <leader>x :x<CR>
 
+nnoremap q: :q
+
 nnoremap <leader><leader> @
 
 nnoremap <leader>r gq}
