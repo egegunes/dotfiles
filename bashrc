@@ -101,8 +101,11 @@ alias gp="git push"
 alias gf="git fetch --all"
 alias gh="git show HEAD"
 
-alias importFromWeb="curl -H 'application/json' -X POST --data @import.json localhost:8000/importFromWeb/"
-alias cancelFromWeb="curl -H 'application/json' -X POST --data @cancel.json localhost:8000/cancelFromWeb/"
+alias importFromWeb-local="curl -H 'application/json' -X POST --data @import.json localhost:8000/importFromWeb/"
+alias cancelFromWeb-local="curl -H 'application/json' -X POST --data @cancel.json localhost:8000/cancelFromWeb/"
+
+alias importFromWeb-erbil="curl -H 'application/json' -X POST --data @import.json erbilcallcenter.rt.idata.com.tr/importFromWeb/"
+alias cancelFromWeb-erbil="curl -H 'application/json' -X POST --data @cancel.json erbilcallcenter.rt.idata.com.tr/cancelFromWeb/"
 
 alias t='todo.sh -d $HOME/Dropbox/todo/todo.cfg'
 complete -F _todo t
