@@ -112,6 +112,8 @@ complete -F _todo t
 
 alias simplehttp="python -m SimpleHTTPServer"
 
+alias cal="cal -m"
+
 # FUNCTIONS
 
 function extract() {
