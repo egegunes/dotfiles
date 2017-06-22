@@ -59,7 +59,6 @@ set linebreak
 set shiftwidth=4
 set softtabstop=4
 set expandtab
-set autoindent
 
 "folding settings
 set foldmethod=indent   "fold based on indent
