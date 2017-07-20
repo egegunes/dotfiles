@@ -1,6 +1,0 @@
-name: callcenter
-root: ~
-
-windows:
-  - vagrant: cd ~/Code/callcenter
-  - editor: cd ~/Code/callcenter/schedule

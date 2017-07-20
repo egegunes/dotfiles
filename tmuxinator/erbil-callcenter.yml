@@ -1,6 +1,0 @@
-name: erbil
-root: ~
-
-windows:
-  - vagrant: cd ~/Code/erbil-callcenter
-  - editor: cd ~/Code/erbil-callcenter/callcenter/schedule

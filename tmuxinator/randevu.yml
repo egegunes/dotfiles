@@ -1,7 +1,0 @@
-name: randevu
-root: ~
-
-windows:
-  - vagrant: cd  ~/Code/randevu-backend
-  - frontend: cd ~/Code/randevu-frontend/src
-  - backend: cd ~/Code/randevu-backend/Code/randevuApi/schedule
