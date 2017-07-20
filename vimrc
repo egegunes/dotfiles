@@ -176,6 +176,8 @@ nnoremap <silent> B ge
 
 nnoremap <C-e> :call RangerExplorer()<CR>
 
+nnoremap <leader>j J
+
 nnoremap J <C-e>
 nnoremap K <C-y>
 
