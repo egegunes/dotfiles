@@ -52,6 +52,8 @@ export LESS_TERMCAP_so=$'\E[01;44;33m'
 export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;32m'
 
+export LS_COLORS='di=6;34:*.py=6;32'
+
 # ALIASES
 
 alias ..="cd .."
