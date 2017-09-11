@@ -1,0 +1,37 @@
+[profiles/2b7c4080-0ddd-46c5-8f23-563fd3ba789d]
+visible-name='egegunes'
+terminal-title='${username}'
+terminal-bell='none'
+foreground-color='#FFFFFFFFFFFF'
+background-color='#000000000000'
+palette=['#252525', '#FF5252', '#C3D82C', '#FFC135', '#42A5F5', '#D81B60', '#00ACC1', '#F5F5F5', '#708284', '#FF5252', '#C3D82C', '#FFC135', '#42A5F5', '#D81B60', '#00ACC1', '#F5F5F5']
+badge-color-set=false
+use-theme-colors=false
+background-transparency-percent=0
+allow-bold=true
+cursor-colors-set=false
+highlight-colors-set=false
+use-system-font=false
+bold-color-set=false
+font='Monospace 16'
+show-scrollbar=false
+scroll-on-output=false
+scrollback-unlimited=true
+
+[keybindings]
+app-shortcuts='<Primary>question'
+terminal-file-browser='<Primary><Shift>e'
+terminal-read-only='<Primary><Shift>r'
+
+[/]
+copy-on-select=true
+auto-hide-mouse=true
+terminal-title-style='small'
+theme-variant='dark'
+paste-advanced-default=false
+control-scroll-zoom=true
+enable-wide-handle=false
+app-title='Terminal'
+paste-strip-first-char=false
+terminal-title-show-when-single=false
+window-style='disable-csd-hide-toolbar'

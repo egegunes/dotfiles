@@ -1,0 +1,13 @@
+[preferences]
+search-view='list-view'
+default-folder-viewer='list-view'
+search-filter-time-type='last_modified'
+
+[window-state]
+geometry='890x550+50+77'
+maximized=true
+
+[list-view]
+default-visible-columns=['name', 'size', 'date_modified']
+default-zoom-level='small'
+default-column-order=['name', 'size', 'type', 'owner', 'group', 'permissions', 'mime_type', 'where', 'date_modified', 'date_modified_with_time', 'date_accessed', 'recency']
