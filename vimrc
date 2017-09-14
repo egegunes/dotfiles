@@ -116,7 +116,7 @@ set noswapfile
 set laststatus=2
 
 "status line setup
-set statusline=%n\ [%f\ %y]    "tail of the filename
+set statusline=%n\ %f\ %y    "tail of the filename
 set statusline+=%*
 
 "display a warning if fileformat isnt unix
