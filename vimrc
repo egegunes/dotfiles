@@ -16,6 +16,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'godlygeek/csapprox'
 Plugin 'sjl/badwolf'
 Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'junegunn/fzf.vim'
 
 call vundle#end()
 filetype plugin indent on
@@ -150,6 +151,8 @@ autocmd GUIEnter * set visualbell t_vb=
 
 set wildchar=<Tab> wildmenu wildmode=full
 
+set rtp+=~/.fzf
+
 "MAPPINGS
 let mapleader="\<Space>"
 let maplocalleader=","
@@ -174,7 +177,7 @@ nnoremap <silent> $ g$
 
 nnoremap <silent> B ge
 
-nnoremap <C-e> :call RangerExplorer()<CR>
+nnoremap <C-p> :Files<CR>
 
 nnoremap <leader>j J
 
@@ -244,15 +247,6 @@ func! Eatchar(pat)
   let c = nr2char(getchar(0))
   return (c =~ a:pat) ? '' : c
 endfunc
-
-function! RangerExplorer()
-    exec "silent !ranger --choosefile=/tmp/vim_ranger_current_file " . expand("%:p:h")
-    if filereadable('/tmp/vim_ranger_current_file')
-        exec 'edit ' . system('cat /tmp/vim_ranger_current_file')
-        call system('rm /tmp/vim_ranger_current_file')
-    endif
-    redraw!
-endfun
 
 " ABBREVIATIONS
 iabbr cnslg console.log();jkhi<C-R>=Eatchar('\s')<CR>
