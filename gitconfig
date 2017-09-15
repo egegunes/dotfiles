@@ -1,0 +1,29 @@
+[user]
+    email = egegunes@gmail.com
+    name = Ege Güneş
+    signingKey = F1D0E1CF
+
+[core]
+    editor = /usr/bin/vim
+
+[push]
+    default = simple
+
+[alias]
+    stash-all = stash save --include-untracked
+    glog = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
+
+[status]
+    showUntrackedFiles = all
+
+[color "diff"]
+    meta = bold blue
+
+[gpg]
+    program = /usr/bin/gpg2
+
+[includeIf "gitdir:~/Code/artistanbul"]
+    path = ~/Code/artistanbul/.identity
+
+[include]
+    path = ~/.gitidentity
