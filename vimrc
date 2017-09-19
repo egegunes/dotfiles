@@ -178,6 +178,7 @@ nnoremap <silent> $ g$
 nnoremap <silent> B ge
 
 nnoremap <C-p> :Files<CR>
+nnoremap <C-e> :Lines<CR>
 
 nnoremap <leader>j J
 
