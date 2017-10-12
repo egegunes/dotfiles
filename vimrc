@@ -74,6 +74,10 @@ set formatoptions-=o "dont continue comments when pushing o/O
 
 " show json quotes, what an annoying problem!
 au BufNewFile,BufRead *.json set syntax=off
+au FileType yaml
+    \ set shiftwidth=2 |
+    \ set softtabstop=2
+au FileType markdown set tw=79
 
 "vertical/horizontal scroll off settings
 set scrolloff=3
