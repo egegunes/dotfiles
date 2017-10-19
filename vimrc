@@ -18,6 +18,7 @@ Plugin 'sjl/badwolf'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'junegunn/fzf.vim'
 Plugin 'w0rp/ale'
+Plugin 'airblade/vim-gitgutter'
 
 call vundle#end()
 filetype plugin indent on
