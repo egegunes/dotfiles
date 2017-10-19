@@ -17,7 +17,6 @@ Plugin 'godlygeek/csapprox'
 Plugin 'sjl/badwolf'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'junegunn/fzf.vim'
-Plugin 'majutsushi/tagbar'
 
 call vundle#end()
 filetype plugin indent on
@@ -150,9 +149,6 @@ set statusline+=%*
 set statusline+=\ 
 set statusline+=%{fugitive#statusline()}
 
-set statusline+=\ 
-set statusline+=%{tagbar#currenttag('%s\ ','','f')}
-
 set statusline+=%=(%l/%L):%v\ %P
 
 set noerrorbells visualbell t_vb=
@@ -188,6 +184,8 @@ nnoremap <silent> B ge
 
 nnoremap <C-p> :Files<CR>
 nnoremap <C-e> :Lines<CR>
+nnoremap <leader>t :Tags<CR>
+nnoremap <leader>b :Buffers<CR>
 
 nnoremap <leader>j J
 
@@ -243,8 +241,6 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
-nmap <leader>t :TagbarToggle<CR>
-
 cmap w!! w !sudo tee % >/dev/null
 
 nnoremap <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
@@ -263,7 +259,3 @@ endfunc
 " ABBREVIATIONS
 iabbr cnslg console.log();jkhi<C-R>=Eatchar('\s')<CR>
 iabbr ipdb import ipdb; ipdb.set_trace()<C-R>=Eatchar('\s')<CR>
-
-let g:tagbar_width = 50
-let g:tagbar_autoclose = 1
-let g:tagbar_compact = 1
