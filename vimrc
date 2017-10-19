@@ -17,6 +17,7 @@ Plugin 'godlygeek/csapprox'
 Plugin 'sjl/badwolf'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'junegunn/fzf.vim'
+Plugin 'w0rp/ale'
 
 call vundle#end()
 filetype plugin indent on
@@ -259,3 +260,5 @@ endfunc
 " ABBREVIATIONS
 iabbr cnslg console.log();jkhi<C-R>=Eatchar('\s')<CR>
 iabbr ipdb import ipdb; ipdb.set_trace()<C-R>=Eatchar('\s')<CR>
+
+let g:ale_python_flake8_options = "--max-line-length=120"
