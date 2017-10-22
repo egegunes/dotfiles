@@ -11,6 +11,7 @@ Plugin 'editorconfig/editorconfig-vim'
 Plugin 'Yggdroot/indentLine'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-rhubarb'
 Plugin 'henrik/vim-indexed-search'
 Plugin 'tpope/vim-surround'
 Plugin 'godlygeek/csapprox'
@@ -78,7 +79,10 @@ au BufNewFile,BufRead *.json set syntax=off
 au FileType yaml
     \ set shiftwidth=2 |
     \ set softtabstop=2
-au FileType markdown set tw=79
+au FileType markdown,asciidoc set tw=79
+au FileType html
+    \ set shiftwidth=2 |
+    \ set softtabstop=2
 
 "vertical/horizontal scroll off settings
 set scrolloff=3
@@ -186,8 +190,11 @@ nnoremap <silent> B ge
 
 nnoremap <C-p> :Files<CR>
 nnoremap <C-e> :Lines<CR>
-nnoremap <leader>t :Tags<CR>
-nnoremap <leader>b :Buffers<CR>
+nnoremap <C-t> :Tags<CR>
+nnoremap <C-b> :Buffers<CR>
+
+map gb :Gblame<CR>
+map gl :Commits<CR>
 
 nnoremap <leader>j J
 
@@ -196,7 +203,7 @@ nnoremap K <C-y>
 
 nnoremap L :bprevious<CR>
 nnoremap H :bnext<CR>
-nnoremap <leader>d :bdelete<CR>
+map bd :bdelete<CR>
 
 " highlight last inserted text
 noremap gV `[v`]
