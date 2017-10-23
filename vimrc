@@ -20,14 +20,12 @@ Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'junegunn/fzf.vim'
 Plugin 'w0rp/ale'
 Plugin 'airblade/vim-gitgutter'
-Plugin 'jonathanfilip/vim-lucius'
 
 call vundle#end()
 filetype plugin indent on
 
 "colors
-colorscheme lucius
-LuciusDarkHighContrast
+colorscheme badwolf
 set background=dark
 set t_Co=256
 
