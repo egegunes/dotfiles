@@ -230,7 +230,6 @@ noremap Y y$
 noremap  <leader>f :call FormatBadChars()<CR>
 
 inoremap jk <esc>
-inoremap <esc> <Nop>
 
 inoremap <C-e> <C-o>$
 inoremap <C-a> <C-o>0
