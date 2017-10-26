@@ -225,6 +225,8 @@ noremap <Down> <Nop>
 noremap <Left> <Nop>
 noremap <Right> <Nop>
 
+noremap ı i
+
 noremap Y y$
 
 noremap  <leader>f :call FormatBadChars()<CR>
