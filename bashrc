@@ -148,3 +148,7 @@ function maketar() {
 function makezip() {
     zip -r "${1%%/}.zip" "$1" ;
 }
+
+function random() {
+    cat /dev/urandom | tr -cd "a-zA-Z0-9" | fold -w $1 | head -n 1
+}
