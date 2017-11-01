@@ -10,8 +10,11 @@
     default = simple
 
 [alias]
+    s = status -s
+    l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
     stash-all = stash save --include-untracked
-    glog = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
+    # Amend the currently staged files to the latest commit
+    amend = commit --amend --reuse-message=HEAD
 
 [status]
     showUntrackedFiles = all

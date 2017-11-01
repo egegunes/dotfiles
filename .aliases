@@ -1,0 +1,40 @@
+alias ..="cd .."
+
+alias rm="rm -Iv --preserve-root"
+alias mv="mv -vi"
+alias cp="cp -vi"
+alias ln="ln -vi"
+alias mkdir="mkdir -p"
+
+alias du='du -kh'
+alias df='df -kTh'
+
+alias path='echo -e ${PATH//:/\\n}'
+
+alias shutdown="sudo shutdown now"
+alias reboot="sudo shutdown -r now"
+
+alias status="systemctl status"
+alias start="systemctl start"
+alias restart="systemctl restart"
+alias stop="systemctl stop"
+alias enable="systemctl enable"
+alias disable="systemctl disable"
+
+alias vu="vagrant up"
+alias vh="vagrant halt"
+alias vssh="vagrant ssh"
+alias vsus="vagrant suspend"
+alias vres="vagrant resume"
+alias vs="vagrant status"
+alias vgs="vagrant global-status"
+
+alias cal="cal -m"
+
+alias clipboard="xclip -selection clipboard"
+
+alias g="git"
+alias h="history"
+
+alias pubip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias localip="sudo ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1'"

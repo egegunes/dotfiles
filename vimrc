@@ -172,7 +172,8 @@ nnoremap <leader>w :w<CR>
 nnoremap <leader>q :q<CR>
 nnoremap <leader>x :x<CR>
 
-nnoremap q: :q
+map q: :q
+map :Wq :wq
 
 nnoremap <leader><leader> @
 
@@ -229,8 +230,6 @@ noremap ı i
 
 noremap Y y$
 
-noremap  <leader>f :call FormatBadChars()<CR>
-
 inoremap jk <esc>
 
 inoremap <C-e> <C-o>$
@@ -254,12 +253,6 @@ map <C-l> <C-w>l
 cmap w!! w !sudo tee % >/dev/null
 
 nnoremap <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
-
-function! FormatBadChars()
-    execute '%s/Ģ/ş/g'
-    execute '%s/Ġ/İ/g'
-    execute '%s/ġ/Ş/g'
-endfunction
 
 func! Eatchar(pat)
   let c = nr2char(getchar(0))
