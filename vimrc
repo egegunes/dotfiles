@@ -15,19 +15,19 @@ Plugin 'tpope/vim-rhubarb'
 Plugin 'henrik/vim-indexed-search'
 Plugin 'tpope/vim-surround'
 Plugin 'godlygeek/csapprox'
-Plugin 'sjl/badwolf'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'junegunn/fzf.vim'
 Plugin 'w0rp/ale'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'ayu-theme/ayu-vim'
 
 call vundle#end()
 filetype plugin indent on
 
 "colors
-colorscheme badwolf
-set background=dark
 set t_Co=256
+set background=dark
+colorscheme ayu
 
 "allow backspacing over everything in insert mode
 set backspace=eol,indent,start
