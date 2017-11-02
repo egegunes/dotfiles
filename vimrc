@@ -175,7 +175,6 @@ nnoremap <leader>q :q<CR>
 nnoremap <leader>x :x<CR>
 
 map q: :q
-map :Wq :wq
 
 nnoremap <leader><leader> @
 
@@ -206,7 +205,7 @@ nnoremap K <C-y>
 
 nnoremap L :bprevious<CR>
 nnoremap H :bnext<CR>
-map bd :bdelete<CR>
+map <C-x> :bdelete<CR>
 
 " highlight last inserted text
 noremap gV `[v`]
