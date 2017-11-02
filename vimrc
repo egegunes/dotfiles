@@ -27,7 +27,9 @@ filetype plugin indent on
 "colors
 set t_Co=256
 set background=dark
-colorscheme ayu
+highlight Normal guibg=black guifg=white
+highlight LineNr guifg=white
+highlight CursorLineNr guifg=yellow
 
 "allow backspacing over everything in insert mode
 set backspace=eol,indent,start
@@ -94,7 +96,7 @@ filetype plugin on
 filetype indent on
 
 "turn on syntax highlighting
-syntax on
+syntax off
 
 "disable mouse
 set mouse=c
