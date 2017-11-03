@@ -15,6 +15,7 @@
     stash-all = stash save --include-untracked
     # Amend the currently staged files to the latest commit
     amend = commit --amend --reuse-message=HEAD
+    head = show HEAD
 
 [status]
     showUntrackedFiles = all
