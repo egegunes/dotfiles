@@ -1,7 +1,3 @@
-if [[ -f "${HOME}/.bash_profile" ]]; then
-    source "${HOME}/.bash_profile"
-fi
-
 if [[ -f /etc/bashrc ]]; then
     source /etc/bashrc
 fi
@@ -9,10 +5,6 @@ fi
 if [[ -f /usr/share/bash-completion/bash_completion ]]; then
     source /usr/share/bash-completion/bash_completion
 fi
-
-for file in /etc/bash_completion.d/* ; do
-    source "$file"
-done
 
 if [ -f /usr/share/git-core/contrib/completion/git-prompt.sh ]; then
     source /usr/share/git-core/contrib/completion/git-prompt.sh
