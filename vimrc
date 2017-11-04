@@ -19,7 +19,6 @@ Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'junegunn/fzf.vim'
 Plugin 'w0rp/ale'
 Plugin 'airblade/vim-gitgutter'
-Plugin 'ayu-theme/ayu-vim'
 
 call vundle#end()
 filetype plugin indent on
@@ -30,6 +29,10 @@ set background=dark
 highlight Normal guibg=black guifg=white
 highlight LineNr guifg=white
 highlight CursorLineNr guifg=yellow
+highlight StatusLine guibg=white guifg=black
+highlight Pmenu guibg=yellow guifg=black
+highlight PmenuSel guibg=black guifg=yellow
+highlight Visual guibg=yellow guifg=black
 
 "allow backspacing over everything in insert mode
 set backspace=eol,indent,start
@@ -96,7 +99,7 @@ filetype plugin on
 filetype indent on
 
 "turn on syntax highlighting
-syntax off
+syntax on
 
 "disable mouse
 set mouse=c
@@ -263,6 +266,7 @@ endfunc
 " ABBREVIATIONS
 iabbr cnslg console.log();jkhi<C-R>=Eatchar('\s')<CR>
 iabbr ipdb import ipdb; ipdb.set_trace()<C-R>=Eatchar('\s')<CR>
+iabbr srak self, request, *args, **kwargs<C-R>=Eatchar('\s')<CR>
 
 let g:ale_python_flake8_options = "--max-line-length=120"
 
