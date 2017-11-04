@@ -2,12 +2,14 @@
 foreground-color='#FFFFFFFFFFFF'
 visible-name='egegunes'
 palette=['#252525', '#FF5252', '#C3D82C', '#FFC135', '#42A5F5', '#D81B60', '#00ACC1', '#F5F5F5', '#708284', '#FF5252', '#C3D82C', '#FFC135', '#42A5F5', '#D81B60', '#00ACC1', '#F5F5F5']
+custom-command='tmux'
 badge-color-set=false
 show-scrollbar=false
 scroll-on-output=false
 cursor-colors-set=false
 highlight-colors-set=false
 use-system-font=false
+use-custom-command=true
 bold-color-set=false
 font='Monospace 16'
 allow-bold=true
