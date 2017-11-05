@@ -33,8 +33,6 @@ fi
 # add alias for ssh to update the tty
 alias ssh="gpg-connect-agent updatestartuptty /bye >/dev/null; ssh"
 
-set -o vi
-
 shopt -s autocd
 shopt -s cdspell
 shopt -s cdable_vars
