@@ -6,11 +6,6 @@ set show-all-if-ambiguous on
 # Immediately add a trailing slash when autocompleting symlinks to directories
 set mark-symlinked-directories on
 
-# Use the text that has already been typed as the prefix for searching through
-# # commands (i.e. more intelligent Up/Down behavior)
-"\e[B": history-search-forward
-"\e[A": history-search-backward
-
 # Do not autocomplete hidden files unless the pattern explicitly begins with a dot
 set match-hidden-files off
 
@@ -36,3 +31,22 @@ set menu-complete-display-prefix on
 # ~/src/mozillail", but to "cd ~/src/mozilla". (This is supported by the
 # Readline used by Bash 4.)
 set skip-completed-text on
+
+# Use the text that has already been typed as the prefix for searching through
+# # commands (i.e. more intelligent Up/Down behavior)
+"\e[B": history-search-forward
+"\e[A": history-search-backward
+
+# Alt-j / Alt-k to navigate history
+"\ek": history-search-forward
+"\ej": history-search-backward
+
+# Alt-h / Alt-l
+"\eh": backward-word
+"\el": forward-word
+
+# Alt-u kills the text from cursor to the end of the line.
+"\eu": kill-line
+
+# Control-n to run command
+"\C-n": accept-line
