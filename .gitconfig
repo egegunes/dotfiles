@@ -16,6 +16,7 @@
     # Amend the currently staged files to the latest commit
     amend = commit --amend --reuse-message=HEAD
     head = show HEAD
+    wip = "!$EDITOR $(git ls-files -m)"
 
 [status]
     showUntrackedFiles = all
