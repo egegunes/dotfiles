@@ -269,22 +269,3 @@ iabbr ipdb import ipdb; ipdb.set_trace()<C-R>=Eatchar('\s')<CR>
 iabbr srak self, request, *args, **kwargs<C-R>=Eatchar('\s')<CR>
 
 let g:ale_python_flake8_options = "--max-line-length=120"
-
-function! s:escape(path)
-    return substitute(a:path, ' ', '\\ ', 'g')
-endfunction
-
-function! AgHandler(line)
-    let parts = split(a:line, ':')
-    let [fn, lno] = parts[0 : 1]
-    execute 'e '. s:escape(fn)
-    execute lno
-    normal! zz
-endfunction
-
-command! -nargs=+ Fag call fzf#run({
-    \ 'source': 'ag "<args>"',
-    \ 'sink': function('AgHandler'),
-    \ 'options': '+m',
-    \ 'tmux_height': '60%'
-\ })
