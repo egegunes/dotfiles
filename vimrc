@@ -30,8 +30,8 @@ highlight Normal guibg=black guifg=white
 highlight LineNr guifg=white
 highlight CursorLineNr guifg=yellow
 highlight StatusLine guibg=white guifg=black
-highlight Pmenu guibg=yellow guifg=black
-highlight PmenuSel guibg=black guifg=yellow
+highlight Pmenu guibg=black guifg=yellow
+highlight PmenuSel guibg=yellow guifg=black
 highlight Visual guibg=yellow guifg=black
 
 "allow backspacing over everything in insert mode
