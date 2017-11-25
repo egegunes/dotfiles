@@ -67,6 +67,7 @@ set linebreak
 "default indent settings
 set shiftwidth=4
 set softtabstop=4
+set tabstop=4
 set expandtab
 
 "folding settings
@@ -79,15 +80,16 @@ set wildmenu                "enable ctrl-n and ctrl-p to scroll thru matches
 
 set formatoptions-=o "dont continue comments when pushing o/O
 
-" show json quotes, what an annoying problem!
-au BufNewFile,BufRead *.json set syntax=off
-au FileType yaml
+au FileType json set syntax=off
+au FileType yaml,html
     \ set shiftwidth=2 |
     \ set softtabstop=2
-au FileType markdown,asciidoc set tw=79
-au FileType html
-    \ set shiftwidth=2 |
-    \ set softtabstop=2
+au FileType markdown set tw=79
+au FileType asciidoc
+    \ set syntax=asciidoc |
+    \ set tw=79 |
+    \ set formatoptions=tcqn
+au FileType go set noexpandtab
 
 "vertical/horizontal scroll off settings
 set scrolloff=3
@@ -110,18 +112,8 @@ set showmatch
 "it's good for performance, but idk how
 set lazyredraw
 
-"show tabs and trailing whitespaces
-set list!
-set listchars=tab:»·,trail:·
-
-au BufNewFile,BufRead *.adoc call s:asciidoc()
-
-function! s:asciidoc()
-    set syntax=asciidoc
-    set filetype=asciidoc
-    set tw=79 
-    set formatoptions=tcqn
-endfunction
+"show trailing whitespaces
+set listchars=trail:·
 
 "undo settings
 set noundofile
