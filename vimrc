@@ -90,6 +90,10 @@ au FileType asciidoc
     \ set tw=79 |
     \ set formatoptions=tcqn
 au FileType go set noexpandtab
+au FileType php
+    \ set noexpandtab |
+    \ set softtabstop=8 |
+    \ set shiftwidth=8
 
 "vertical/horizontal scroll off settings
 set scrolloff=3
