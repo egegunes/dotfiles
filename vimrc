@@ -33,6 +33,8 @@ highlight StatusLine guibg=white guifg=black
 highlight Pmenu guibg=black guifg=yellow
 highlight PmenuSel guibg=yellow guifg=black
 highlight Visual guibg=yellow guifg=black
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
 
 "allow backspacing over everything in insert mode
 set backspace=eol,indent,start
@@ -115,9 +117,6 @@ set showmatch
 
 "it's good for performance, but idk how
 set lazyredraw
-
-"show trailing whitespaces
-set listchars=trail:·
 
 "undo settings
 set noundofile
