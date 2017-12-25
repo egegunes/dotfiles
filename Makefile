@@ -13,3 +13,5 @@ vim:
 dconf:
 	dconf load /com/gexperts/Tilix/ < $(CURDIR)/tilix.dconf
 	dconf load /org/gnome/nautilus/ < $(CURDIR)/nautilus.dconf
+	dconf load /org/gnome/desktop/wm/keybindings/ < $(CURDIR)/keybindings.system.dconf
+	dconf load /plugins/media-keys/custom-keybindings/ < $(CURDIR)/keybindings.custom.dconf
