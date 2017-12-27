@@ -15,3 +15,9 @@ dconf:
 	dconf load /org/gnome/nautilus/ < $(CURDIR)/nautilus.dconf
 	dconf load /org/gnome/desktop/wm/keybindings/ < $(CURDIR)/keybindings.system.dconf
 	dconf load /plugins/media-keys/custom-keybindings/ < $(CURDIR)/keybindings.custom.dconf
+
+dconf-dump:
+	dconf dump /com/gexperts/Tilix/ > $(CURDIR)/tilix.dconf
+	dconf dump /org/gnome/nautilus/ > $(CURDIR)/nautilus.dconf
+	dconf dump /org/gnome/desktop/wm/keybindings/ > $(CURDIR)/keybindings.system.dconf
+	dconf dump /plugins/media-keys/custom-keybindings/ > $(CURDIR)/keybindings.custom.dconf
