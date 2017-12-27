@@ -1,4 +1,6 @@
 [/]
+switch-to-workspace-up=['<Primary><Alt>k']
 show-desktop=['<Super>d']
 switch-to-workspace-down=['<Primary><Alt>j']
-switch-to-workspace-up=['<Primary><Alt>k']
+move-to-workspace-down=['<Primary><Shift>j']
+move-to-workspace-up=['<Primary><Shift>k']
