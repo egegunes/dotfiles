@@ -34,19 +34,13 @@ set skip-completed-text on
 
 # Use the text that has already been typed as the prefix for searching through
 # # commands (i.e. more intelligent Up/Down behavior)
-"\e[B": history-search-forward
-"\e[A": history-search-backward
+"\e[B": history-search-forward  # ctrl+down
+"\e[A": history-search-backward  # ctrl+up
+"\e[1;5C": forward-word   # ctrl+right
+"\e[1;5D": backward-word  # ctrl+left
 
-# Alt-j / Alt-k to navigate history
-"\ek": history-search-forward
-"\ej": history-search-backward
+"\ek": history-search-forward  # alt+k
+"\ej": history-search-backward  # alt+j
+"\el": forward-word   # alt+l
+"\eh": backward-word  # alt+h
 
-# Alt-h / Alt-l
-"\eh": backward-word
-"\el": forward-word
-
-# Alt-u kills the text from cursor to the end of the line.
-"\eu": kill-line
-
-# Control-n to run command
-"\C-n": accept-line
