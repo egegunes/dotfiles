@@ -175,6 +175,7 @@ nnoremap <leader>x :x<CR>
 map q: :q
 
 nnoremap <leader><leader> @
+nnoremap Q @@
 
 nnoremap <leader>r gq}
 
