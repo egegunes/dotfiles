@@ -190,10 +190,7 @@ nnoremap <silent> $ g$
 
 nnoremap <silent> B ge
 
-nnoremap <C-p> :GFiles<CR>
-nnoremap <C-e> :Lines<CR>
-nnoremap <C-t> :Tags<CR>
-nnoremap <C-b> :Buffers<CR>
+nnoremap <C-p> :Files<CR>
 
 map gb :Gblame<CR>
 map gl :Commits<CR>
