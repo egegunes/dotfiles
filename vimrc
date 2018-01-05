@@ -192,6 +192,10 @@ nnoremap <silent> B ge
 
 nnoremap <C-p> :Files<CR>
 
+map gn :GitGutterNextHunk<CR>
+map gp :GitGutterPrevHunk<CR>
+map gu :GitGutterUndoHunk<CR>
+
 map gb :Gblame<CR>
 map gl :Commits<CR>
 
