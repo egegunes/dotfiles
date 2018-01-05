@@ -35,6 +35,7 @@ highlight PmenuSel guibg=yellow guifg=black
 highlight Visual guibg=yellow guifg=black
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
+match ErrorMsg '\%>120v.\+'
 
 "allow backspacing over everything in insert mode
 set backspace=eol,indent,start
