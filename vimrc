@@ -83,6 +83,9 @@ set wildmenu                "enable ctrl-n and ctrl-p to scroll thru matches
 
 set formatoptions-=o "dont continue comments when pushing o/O
 
+"turn on syntax highlighting
+syntax on
+
 au FileType json set syntax=off
 au FileType yaml,html
     \ set shiftwidth=2 |
@@ -106,9 +109,6 @@ set sidescroll=1
 "load ftplugins and indent files
 filetype plugin on
 filetype indent on
-
-"turn on syntax highlighting
-syntax on
 
 "disable mouse
 set mouse=c
