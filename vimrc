@@ -197,6 +197,7 @@ map gu :GitGutterUndoHunk<CR>
 
 map gb :Gblame<CR>
 map gl :Commits<CR>
+map gd :Gdiff<CR>
 
 nnoremap <leader>j J
 
