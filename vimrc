@@ -97,8 +97,8 @@ au FileType asciidoc
 au FileType go set noexpandtab
 au FileType php
     \ set noexpandtab |
-    \ set softtabstop=8 |
-    \ set shiftwidth=8
+    \ set softtabstop=4 |
+    \ set shiftwidth=4
 
 "vertical/horizontal scroll off settings
 set scrolloff=3
