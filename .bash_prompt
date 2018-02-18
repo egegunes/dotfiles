@@ -76,6 +76,7 @@ fi;
 
 # Set the terminal title to the current working directory.
 PS1="\[\033]0;\w\007\]";
+PS1+="\[${red}\]\h ";
 PS1+="\[${purple}\]\w"; # working directory
 #PS1+="\$(prompt_git \"${white} ${cyan}\")"; # Git repository details
 PS1+="\[${white}\] \$ \[${reset}\]"; # `$` (and reset color)
