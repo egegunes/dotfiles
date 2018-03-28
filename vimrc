@@ -197,11 +197,6 @@ map gb :Gblame<CR>
 map gl :Commits<CR>
 map gd :Gdiff<CR>
 
-nnoremap <leader>j J
-
-nnoremap J <C-e>
-nnoremap K <C-y>
-
 nnoremap L :bprevious<CR>
 nnoremap H :bnext<CR>
 map <C-x> :bdelete<CR>
@@ -218,13 +213,16 @@ noremap <leader>y "+y
 noremap <leader>S :%s//g<LEFT><LEFT>
 noremap <leader>s :s//g<LEFT><LEFT>
 
-noremap <leader>l @:
 noremap <CR> o<Esc>
 
 noremap <Up> <Nop>
 noremap <Down> <Nop>
 noremap <Left> <Nop>
 noremap <Right> <Nop>
+inoremap <Up> <Nop>
+inoremap <Down> <Nop>
+inoremap <Left> <Nop>
+inoremap <Right> <Nop>
 
 noremap ı i
 
@@ -235,11 +233,6 @@ inoremap jk <esc>
 inoremap <C-e> <C-o>$
 inoremap <C-a> <C-o>0
 inoremap <C-d> <C-o>x
-
-inoremap <Up> <Nop>
-inoremap <Down> <Nop>
-inoremap <Left> <Nop>
-inoremap <Right> <Nop>
 
 " Make DEL delete the selected text
 vmap <BS> x
