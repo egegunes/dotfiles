@@ -1,19 +1,20 @@
 [profiles/2b7c4080-0ddd-46c5-8f23-563fd3ba789d]
 foreground-color='#FFFFFFFFFFFF'
 visible-name='egegunes'
-palette=['#252525', '#FF5252', '#C3D82C', '#FFC135', '#42A5F5', '#D81B60', '#00ACC1', '#F5F5F5', '#708284', '#FF5252', '#C3D82C', '#FFC135', '#42A5F5', '#D81B60', '#00ACC1', '#F5F5F5']
+palette=['#000000', '#AA0000', '#00AA00', '#AA5400', '#0000AA', '#AA00AA', '#00AAAA', '#AAAAAA', '#545454', '#FF5454', '#54FF54', '#FFFF54', '#5454FF', '#FF54FF', '#54FFFF', '#FFFFFF']
 custom-command='tmux'
 badge-color-set=false
 show-scrollbar=false
-scroll-on-output=false
+cursor-shape='block'
 cursor-colors-set=false
 highlight-colors-set=false
-use-system-font=false
-use-custom-command=true
+scroll-on-output=false
+use-custom-command=false
 bold-color-set=false
 font='Monospace 16'
 allow-bold=true
 scrollback-unlimited=true
+use-system-font=false
 terminal-bell='none'
 terminal-title='${username}'
 background-color='#000000000000'
@@ -32,6 +33,7 @@ control-scroll-zoom=true
 enable-wide-handle=false
 app-title='Terminal'
 paste-strip-first-char=false
+warn-vte-config-issue=false
 terminal-title-show-when-single=false
 window-style='disable-csd-hide-toolbar'
 

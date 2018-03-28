@@ -7,6 +7,9 @@ search-filter-time-type='last_modified'
 geometry='890x550+50+77'
 maximized=true
 
+[compression]
+default-compression-format='zip'
+
 [list-view]
 default-visible-columns=['name', 'size', 'date_modified']
 default-zoom-level='small'
