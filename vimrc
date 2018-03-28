@@ -8,16 +8,11 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'Raimondi/delimitMate'
 Plugin 'editorconfig/editorconfig-vim'
-Plugin 'Yggdroot/indentLine'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-rhubarb'
-Plugin 'henrik/vim-indexed-search'
 Plugin 'tpope/vim-surround'
 Plugin 'godlygeek/csapprox'
-Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'junegunn/fzf.vim'
-Plugin 'w0rp/ale'
 Plugin 'airblade/vim-gitgutter'
 
 call vundle#end()
@@ -265,5 +260,3 @@ endfunc
 iabbr cnslg console.log();jkhi<C-R>=Eatchar('\s')<CR>
 iabbr ipdb import ipdb; ipdb.set_trace()<C-R>=Eatchar('\s')<CR>
 iabbr srak self, request, *args, **kwargs<C-R>=Eatchar('\s')<CR>
-
-let g:ale_python_flake8_options = "--max-line-length=120"
