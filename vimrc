@@ -29,6 +29,9 @@ highlight Pmenu guibg=black guifg=yellow
 highlight PmenuSel guibg=yellow guifg=black
 highlight Visual guibg=yellow guifg=black
 highlight ExtraWhitespace ctermbg=red guibg=red
+highlight DiffAdd guibg=black guifg=green
+highlight DiffChange guibg=black guifg=yellow
+highlight DiffDelete guibg=black guifg=red
 match ExtraWhitespace /\s\+$/
 
 "allow backspacing over everything in insert mode
