@@ -22,6 +22,7 @@ background-transparency-percent=0
 use-theme-colors=false
 
 [/]
+prompt-on-close=false
 accelerators-enabled=true
 use-overlay-scrollbar=true
 copy-on-select=true
@@ -38,10 +39,12 @@ terminal-title-show-when-single=false
 window-style='disable-csd-hide-toolbar'
 
 [keybindings]
-app-shortcuts='<Primary>question'
-session-switch-to-terminal-left='disabled'
+win-switch-to-next-session='<Primary>Down'
 session-switch-to-terminal-down='disabled'
+win-switch-to-previous-session='<Primary>Up'
 session-switch-to-terminal-right='disabled'
+terminal-file-browser='<Primary><Shift>e'
+app-shortcuts='<Primary>question'
 session-switch-to-terminal-up='disabled'
 terminal-read-only='<Primary><Shift>r'
-terminal-file-browser='<Primary><Shift>e'
+session-switch-to-terminal-left='disabled'
