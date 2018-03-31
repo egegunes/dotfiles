@@ -249,18 +249,12 @@ nnoremap <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
 inoremap ( ()<Left>
 inoremap [ []<Left>
 inoremap { {}<Left>
-inoremap ' ''<Left>
-inoremap " ""<Left>
 inoremap (, (),<Left><Left>
-inoremap {, {},<Left><Left>
-inoremap [, [],<Left><Left>
-inoremap ', '',<Left>
-inoremap ", "",<Left>
 inoremap (; ();<Left><Left>
+inoremap {, {},<Left><Left>
 inoremap {; {};<Left><Left>
+inoremap [, [],<Left><Left>
 inoremap [; [];<Left><Left>
-inoremap '; '';<Left>
-inoremap "; "";<Left>
 
 func! Eatchar(pat)
   let c = nr2char(getchar(0))
