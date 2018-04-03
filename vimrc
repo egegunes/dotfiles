@@ -6,6 +6,7 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 
+Plugin 'Raimondi/delimitMate'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'tpope/vim-fugitive'
@@ -245,16 +246,6 @@ map <C-l> <C-w>l
 cmap w!! w !sudo tee % >/dev/null
 
 nnoremap <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
-
-inoremap ( ()<Left>
-inoremap [ []<Left>
-inoremap { {}<Left>
-inoremap (, (),<Left><Left>
-inoremap (; ();<Left><Left>
-inoremap {, {},<Left><Left>
-inoremap {; {};<Left><Left>
-inoremap [, [],<Left><Left>
-inoremap [; [];<Left><Left>
 
 func! Eatchar(pat)
   let c = nr2char(getchar(0))
