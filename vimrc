@@ -256,3 +256,17 @@ endfunc
 iabbr cnslg console.log();jkhi<C-R>=Eatchar('\s')<CR>
 iabbr ipdb import ipdb; ipdb.set_trace()<C-R>=Eatchar('\s')<CR>
 iabbr srak self, request, *args, **kwargs<C-R>=Eatchar('\s')<CR>
+
+function! s:search_mode_start()
+    cnoremap <tab> <c-f>a<c-n>
+    let s:old_complete_opt = &completeopt
+    set completeopt-=noinsert
+endfunction
+
+function! s:search_mode_stop()
+    cunmap <tab>
+    let &completeopt = s:old_complete_opt
+endfunction
+
+autocmd CmdlineEnter [/\?] call <SID>search_mode_start()
+autocmd CmdlineLeave [/\?] call <SID>search_mode_stop()
