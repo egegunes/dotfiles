@@ -19,7 +19,7 @@ set background=dark
 highlight Normal ctermbg=black ctermfg=white
 highlight LineNr ctermbg=black ctermfg=white
 highlight CursorLineNr ctermbg=black ctermfg=yellow
-highlight StatusLine ctermbg=white ctermfg=black
+highlight StatusLine ctermbg=black ctermfg=white
 highlight Pmenu ctermbg=black ctermfg=yellow
 highlight PmenuSel ctermbg=yellow ctermfg=black
 highlight Visual ctermbg=yellow ctermfg=black
@@ -99,43 +99,19 @@ set mouse=c
 "it's good for performance, but idk how
 set lazyredraw
 
-"undo settings
 set noundofile
-
 set noswapfile
 
-"always show status line
-set laststatus=2
-"status line setup
-set statusline=%n\ %f\ %y    "tail of the filename
-set statusline+=%*
-"display a warning if fileformat isnt unix
-set statusline+=%#warningmsg#
-set statusline+=%{&ff!='unix'?'['.&ff.']':''}
-set statusline+=%*
-"display a warning if file encoding isnt utf-8
-set statusline+=%#warningmsg#
-set statusline+=%{(&fenc!='utf-8'&&&fenc!='')?'['.&fenc.']':''}
-set statusline+=%*
-set statusline+=%h      "help file flag
-"read only flag
-set statusline+=%#identifier#
-set statusline+=%r
-set statusline+=%*
-"modified flag
-set statusline+=%#warningmsg#
-set statusline+=%m
-set statusline+=%*
-set statusline+=\ 
-set statusline+=%{fugitive#statusline()}
-set statusline+=%=(%l/%L):%v\ %P
-
-set noerrorbells visualbell t_vb=
-autocmd GUIEnter * set visualbell t_vb=
-
-set wildchar=<Tab> wildmenu wildmode=full
-
 set rtp+=~/.fzf
+
+set laststatus=2
+set statusline=[%n]\ 
+set statusline+=%F\ 
+set statusline+=%{fugitive#statusline()}
+set statusline+=%y\ 
+set statusline+=%r\ 
+set statusline+=%m\ 
+set statusline+=%=(%l/%L)
 
 "MAPPINGS
 let mapleader="\<Space>"
