@@ -8,7 +8,6 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
-Plugin 'godlygeek/csapprox'
 Plugin 'junegunn/fzf.vim'
 
 call vundle#end()
@@ -17,17 +16,17 @@ filetype plugin indent on
 "colors
 set t_Co=256
 set background=dark
-highlight Normal guibg=black guifg=white
-highlight LineNr guibg=black guifg=white
-highlight CursorLineNr guibg=black guifg=yellow
-highlight StatusLine guibg=white guifg=black
-highlight Pmenu guibg=black guifg=yellow
-highlight PmenuSel guibg=yellow guifg=black
-highlight Visual guibg=yellow guifg=black
-highlight ExtraWhitespace ctermbg=red guibg=red
-highlight DiffAdd guibg=black guifg=green
-highlight DiffChange guibg=black guifg=yellow
-highlight DiffDelete guibg=black guifg=red
+highlight Normal ctermbg=black ctermfg=white
+highlight LineNr ctermbg=black ctermfg=white
+highlight CursorLineNr ctermbg=black ctermfg=yellow
+highlight StatusLine ctermbg=white ctermfg=black
+highlight Pmenu ctermbg=black ctermfg=yellow
+highlight PmenuSel ctermbg=yellow ctermfg=black
+highlight Visual ctermbg=yellow ctermfg=black
+highlight ExtraWhitespace ctermbg=red ctermbg=red
+highlight DiffAdd ctermbg=black ctermfg=green
+highlight DiffChange ctermbg=black ctermfg=yellow
+highlight DiffDelete ctermbg=black ctermfg=red
 match ExtraWhitespace /\s\+$/
 
 "allow backspacing over everything in insert mode
