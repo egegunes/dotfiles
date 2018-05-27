@@ -73,26 +73,6 @@ set wildmenu                "enable ctrl-n and ctrl-p to scroll thru matches
 "turn on syntax highlighting
 syntax on
 
-"load ftplugins and indent files
-filetype plugin on
-filetype indent on
-
-au FileType json set syntax=off
-au FileType yaml,html
-    \ set shiftwidth=2 |
-    \ set softtabstop=2
-au FileType markdown set tw=79
-au FileType asciidoc
-    \ set syntax=asciidoc |
-    \ set tw=79 |
-    \ set formatoptions=tcqn
-au FileType go set noexpandtab
-au FileType php
-    \ set noexpandtab |
-    \ set softtabstop=4 |
-    \ set shiftwidth=4
-
-
 "disable mouse
 set mouse=c
 
@@ -112,6 +92,51 @@ set statusline+=%y\
 set statusline+=%r\ 
 set statusline+=%m\ 
 set statusline+=%=(%l/%L)
+
+"load ftplugins and indent files
+filetype plugin on
+filetype indent on
+
+au FileType json call JSON()
+function! JSON()
+    set syntax=off
+endfunc
+
+au FileType yaml call YAML()
+function! YAML()
+    set shiftwidth=2
+    set softtabstop=2
+endfunc
+
+au FileType html call HTML()
+function! HTML()
+    set shiftwidth=2
+    set softtabstop=2
+endfunc
+
+au FileType markdown set call MD()
+function! MD()
+    set tw=79
+endfunc
+
+au FileType asciidoc call ADOC()
+function! ADOC()
+    set syntax=asciidoc
+    set tw=79
+    set formatoptions=tcqn
+endfunc
+
+au FileType go call GO()
+function! GO()
+    set noexpandtab
+endfunc
+
+au FileType php call PHP()
+function! PHP()
+    set noexpandtab
+    set softtabstop=4
+    set shiftwidth=4
+endfunc
 
 "MAPPINGS
 " :map   :noremap  :unmap     Normal, Visual, Select, Operator-pending
