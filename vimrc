@@ -114,6 +114,17 @@ set statusline+=%m\
 set statusline+=%=(%l/%L)
 
 "MAPPINGS
+" :map   :noremap  :unmap     Normal, Visual, Select, Operator-pending
+" :nmap  :nnoremap :nunmap    Normal
+" :vmap  :vnoremap :vunmap    Visual and Select
+" :smap  :snoremap :sunmap    Select
+" :xmap  :xnoremap :xunmap    Visual
+" :omap  :onoremap :ounmap    Operator-pending
+" :map!  :noremap! :unmap!    Insert and Command-line
+" :imap  :inoremap :iunmap    Insert
+" :lmap  :lnoremap :lunmap    Insert, Command-line, Lang-Arg
+" :cmap  :cnoremap :cunmap    Command-line
+
 let mapleader="\<Space>"
 let maplocalleader=","
 
