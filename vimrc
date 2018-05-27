@@ -135,7 +135,6 @@ nnoremap H :bnext<CR>
 nnoremap <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
 
 noremap <leader>h :nohlsearch<CR>
-noremap <CR> o<Esc>
 noremap <Up> <Nop>
 noremap <Down> <Nop>
 noremap <Left> <Nop>
@@ -151,6 +150,10 @@ inoremap jk <esc>
 inoremap <C-e> <C-o>$
 inoremap <C-a> <C-o>0
 inoremap <C-d> <C-o>x
+inoremap {<CR> {<CR>}<ESC>kA<CR><Tab>
+inoremap { {}<ESC>i
+inoremap ( ()<ESC>i
+inoremap [ []<ESC>i
 
 " ABBREVIATIONS
 func! Eatchar(pat)
