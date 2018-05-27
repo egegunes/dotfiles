@@ -133,6 +133,14 @@ map gb :Gblame<CR>
 map gl :Commits<CR>
 map gd :Gdiff<CR>
 map <C-x> :bdelete<CR>
+map <leader>h :nohlsearch<CR>
+map <Up> <Nop>
+map <Down> <Nop>
+map <Left> <Nop>
+map <Right> <Nop>
+map ı i
+map Y y$
+map <leader>c :copen<CR>
 
 nnoremap <leader>w :w<CR>
 nnoremap <leader>q :q<CR>
@@ -144,14 +152,6 @@ nnoremap <C-p> :Files<CR>
 nnoremap L :bprevious<CR>
 nnoremap H :bnext<CR>
 nnoremap <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
-
-noremap <leader>h :nohlsearch<CR>
-noremap <Up> <Nop>
-noremap <Down> <Nop>
-noremap <Left> <Nop>
-noremap <Right> <Nop>
-noremap ı i
-noremap Y y$
 
 inoremap <Up> <Nop>
 inoremap <Down> <Nop>
