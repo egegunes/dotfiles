@@ -37,10 +37,9 @@ set history=1000
 
 "show incomplete cmds down the bottom
 set showcmd
-"show current mode down the bottom
-set showmode
 "show matching braces
 set showmatch
+set noshowmode
 
 "show relative line numbers
 set relativenumber
@@ -88,10 +87,12 @@ set laststatus=2
 set statusline=[%n]\ 
 set statusline+=%F\ 
 set statusline+=%{fugitive#statusline()}
-set statusline+=%y\ 
-set statusline+=%r\ 
-set statusline+=%m\ 
-set statusline+=%=(%l/%L)
+set statusline+=%y
+set statusline+=\[%{mode()}\]
+set statusline+=%m
+set statusline+=%r
+set statusline+=%=%v\ 
+set statusline+=(%l/%L)
 
 "load ftplugins and indent files
 filetype plugin on
