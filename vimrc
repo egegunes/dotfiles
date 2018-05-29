@@ -66,7 +66,7 @@ set linebreak
 "default indent settings
 set shiftwidth=4
 set softtabstop=4
-set tabstop=4
+set tabstop=8
 set expandtab
 
 set wildmode=list:longest   "make cmdline tab completion similar to bash
