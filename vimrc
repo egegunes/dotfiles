@@ -157,19 +157,19 @@ endfunc
 let mapleader="\<Space>"
 let maplocalleader=","
 
-map q: :q
-map gb :Gblame<CR>
-map gl :Commits<CR>
-map gd :Gdiff<CR>
-map <C-x> :bdelete<CR>
-map <leader>h :nohlsearch<CR>
-map <Up> <Nop>
-map <Down> <Nop>
-map <Left> <Nop>
-map <Right> <Nop>
-map ı i
-map Y y$
-map <leader>c :copen<CR>
+noremap q: :q
+noremap gb :Gblame<CR>
+noremap gl :Commits<CR>
+noremap gd :Gdiff<CR>
+noremap <C-x> :bdelete<CR>
+noremap <leader>h :nohlsearch<CR>
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
+noremap ı i
+noremap Y y$
+noremap <leader>c :copen<CR>
 
 nnoremap <leader>w :w<CR>
 nnoremap <leader>q :q<CR>
