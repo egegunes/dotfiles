@@ -190,10 +190,6 @@ inoremap jk <esc>
 inoremap <C-e> <C-o>$
 inoremap <C-a> <C-o>0
 inoremap <C-d> <C-o>x
-inoremap {<CR> {<CR>}<ESC>kA<CR><Tab>
-inoremap { {}<ESC>i
-inoremap ( ()<ESC>i
-inoremap [ []<ESC>i
 
 " ABBREVIATIONS
 func! Eatchar(pat)
