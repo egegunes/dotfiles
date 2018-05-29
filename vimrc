@@ -29,6 +29,9 @@ highlight DiffChange ctermbg=black ctermfg=yellow
 highlight DiffDelete ctermbg=black ctermfg=red
 match ExtraWhitespace /\s\+$/
 
+set colorcolumn=120
+highlight ColorColumn ctermbg=grey
+
 "allow backspacing over everything in insert mode
 set backspace=eol,indent,start
 
