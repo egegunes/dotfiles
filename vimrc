@@ -86,6 +86,8 @@ set noswapfile
 
 set rtp+=~/.fzf
 
+set autowrite
+
 set laststatus=2
 set statusline=[%n]\ 
 set statusline+=%F\ 
