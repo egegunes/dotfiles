@@ -28,6 +28,10 @@ highlight DiffAdd ctermbg=black ctermfg=green
 highlight DiffChange ctermbg=black ctermfg=yellow
 highlight DiffDelete ctermbg=black ctermfg=red
 match ExtraWhitespace /\s\+$/
+if version >= 700
+  autocmd InsertEnter * highlight StatusLine ctermbg=black ctermfg=yellow
+  autocmd InsertLeave * highlight StatusLine ctermbg=black ctermfg=white
+endif
 
 set colorcolumn=120
 highlight ColorColumn ctermbg=grey
