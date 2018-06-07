@@ -107,6 +107,13 @@ set statusline+=(%l/%L)
 filetype plugin on
 filetype indent on
 
+
+au FileType python call PYTHON()
+function! PYTHON()
+    set makeprg=flake8\ --max-line-length=120\ %:S
+    set errorformat=%f:%l:%c:\ %t%n\ %m
+endfunc
+
 au FileType json call JSON()
 function! JSON()
     set syntax=off
