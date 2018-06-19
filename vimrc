@@ -132,7 +132,7 @@ function! HTML()
     set softtabstop=2
 endfunc
 
-au FileType markdown set call MD()
+au FileType markdown call MD()
 function! MD()
     set tw=79
 endfunc
