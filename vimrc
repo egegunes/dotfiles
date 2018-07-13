@@ -195,7 +195,6 @@ nnoremap <C-p> :Files<CR>
 nnoremap L :bprevious<CR>
 nnoremap H :bnext<CR>
 nnoremap <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
-nnoremap <CR> o<Esc>
 
 inoremap <Up> <Nop>
 inoremap <Down> <Nop>
