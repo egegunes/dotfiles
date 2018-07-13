@@ -34,7 +34,7 @@ if version >= 700
   autocmd InsertLeave * highlight StatusLine ctermbg=black ctermfg=white
 endif
 
-set colorcolumn=120
+set colorcolumn=80
 highlight ColorColumn ctermbg=grey
 
 "allow backspacing over everything in insert mode
