@@ -64,7 +64,7 @@ set ignorecase
 set smartcase
 
 "dont wrap lines
-set wrap
+set nowrap
 "wrap lines at convenient points
 set linebreak
 
