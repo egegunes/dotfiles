@@ -10,6 +10,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'junegunn/fzf.vim'
 Plugin 'scrooloose/nerdcommenter'
+Plugin 'nvie/vim-flake8'
 
 call vundle#end()
 filetype plugin indent on
@@ -152,8 +153,11 @@ endfunc
 au FileType php call PHP()
 function! PHP()
     set noexpandtab
-    set softtabstop=4
-    set shiftwidth=4
+    set tabstop=8
+    set softtabstop=8
+    set shiftwidth=8
+    set list
+    set listchars=tab:>-
 endfunc
 
 "MAPPINGS
