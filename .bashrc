@@ -43,3 +43,6 @@ shopt -s globstar
 shopt -s nocaseglob
 
 stty -ixon
+
+export GIT_PS1_SHOWDIRTYSTATE=1
+export PS1='\w$(__git_ps1 " (%s)")\$ '
