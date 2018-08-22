@@ -1,16 +1,24 @@
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
-(add-to-list 'package-archives '("org" . "https://orgmode.org/elpa/") t)
 (package-initialize)
 
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages (quote (org ##))))
+(setq user-full-name "Ege Güneş")
+(setq user-mail-address "egegunes@gmail.com")
 
-(ido-mode 1)
+(use-package helm
+  :ensure t
+  :bind (("M-x" . helm-M-x)
+	 ("C-x C-f". helm-find-files)
+	 ([f10] . helm-buffers-list)
+	 ([S-f10] . helm-recentf)))
+(use-package solarized-theme
+  :ensure t
+  :config
+  (load-theme 'solarized-dark t))
+(use-package magit
+  :ensure t
+  :bind (("C-x g" . magit-status)))
+
 (require 'org)
 (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
 
@@ -22,9 +30,6 @@
                                  (org-agenda-files :maxlevel . 9))))
 (setq org-refile-allow-creating-parent-nodes (quote confirm))
 (setq org-refile-use-outline-path t)
-(setq org-outline-path-complete-in-steps nil)
-(setq org-completion-use-ido t)
-(setq ido-everywhere t)
 (setq org-default-notes-file (concat org-directory "/inbox.org"))
 (setq org-todo-keywords
       (quote ((sequence "TODO(t)" "NEXT(n)" "|" "DONE(d)")
@@ -45,6 +50,39 @@
 
 (setq org-agenda-compact-blocks t)
 
-(setq inhibit-splash-screen t)
-(org-agenda-list)
-(delete-other-windows)
+(setq inhibit-startup-screen t)
+
+; enable y/n answers
+(fset 'yes-or-no-p 'y-or-n-p)
+; don't use tabs to indent
+(setq-default indent-tabs-mode nil)
+; but maintain correct appearance
+(setq-default tab-width 8)
+
+;; Newline at end of file
+(setq require-final-newline t)
+
+; do not show menu bar
+(menu-bar-mode -1)
+; do not show tool bar
+(tool-bar-mode -1)
+; do not show scroll bar
+(scroll-bar-mode -1)
+; show matching parentheses
+(show-paren-mode 1)
+; show line numbers
+(global-linum-mode t)
+; show line number in mode line
+(line-number-mode t)
+; show column number in mode line
+(column-number-mode t)
+; show file size in mode line
+(size-indication-mode t)
+; highlight current line
+(global-hl-line-mode +1)
+
+;; config changes made through the customize UI will be stored here
+(setq custom-file (expand-file-name "custom.el" user-emacs-directory))
+
+(when (file-exists-p custom-file)
+  (load custom-file))
