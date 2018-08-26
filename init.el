@@ -137,6 +137,10 @@
   :bind ("M-p" . helm-projectile-find-file)
   :config (helm-projectile-on))
 
+(use-package go-mode
+  :ensure t
+  :config (add-to-list 'auto-mode-alist '("\\.go\\'" . go-mode)))
+
 (require 'org)
 (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
 
