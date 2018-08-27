@@ -118,10 +118,6 @@
   :ensure t
   :bind (("C-x g" . magit-status)))
 
-(use-package org-bullets
-  :ensure t
-  :config (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
-
 (use-package expand-region
   :ensure t
   :bind (("C-=" . er/expand-region)))
