@@ -137,6 +137,10 @@
   :ensure t
   :config (add-to-list 'auto-mode-alist '("\\.go\\'" . go-mode)))
 
+(use-package php-mode
+  :ensure t
+  :config (add-to-list 'auto-mode-alist '("\\.php\\'" . php-mode)))
+
 (require 'org)
 (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
 
