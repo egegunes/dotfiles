@@ -154,7 +154,7 @@
 (setq org-refile-use-outline-path t)
 (setq org-default-notes-file (concat org-directory "/inbox.org"))
 (setq org-todo-keywords
-      (quote ((sequence "TODO(t)" "WAITING(w@)" "|" "DONE(d)")
+      (quote ((sequence "TODO(t)" "AGENDA(a)" "WAITING(w@)" "|" "DONE(d)")
               (sequence "PROJECT(p)" "|" "DONE(d)" "CANCELLED(c@)"))))
 (setq org-log-done t)
 (setq org-capture-templates
@@ -162,6 +162,8 @@
 	 "* %?")
         ("t" "todo" entry (file org-default-notes-file)
          "* TODO %?")
+        ("a" "agenda" entry (file org-default-notes-file)
+         "* AGENDA %?")
         ("p" "phone" entry (file org-default-notes-file)
          "* PHONE with %? :PHONE:\n%U\n")
         ("m" "meeting" entry (file org-default-notes-file)
