@@ -105,6 +105,10 @@ set statusline+=%r
 set statusline+=%=%v\ 
 set statusline+=(%l/%L)
 
+"little courtesy please
+set splitright
+set splitbelow
+
 "load ftplugins and indent files
 filetype plugin on
 filetype indent on
