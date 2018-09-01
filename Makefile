@@ -5,12 +5,14 @@ all: bash vim git dconf
 bash:
 	for file in $(CURDIR)/bash/*; do \
 		name=$$(basename $$file); \
-		ln -sfn $$file $(HOME)/$$name; \
+		ln -sfn $$file $(HOME)/.$$name; \
 	done; \
 
 vim:
 	mkdir -p $(HOME)/.vim/
 	ln -sfn $(CURDIR)/vim/vimrc $(HOME)/.vim/vimrc
+	ln -sfn $(CURDIR)/vim/ftplugin $(HOME)/.vim/ftplugin
+	ln -sfn $(CURDIR)/vim/ftindent $(HOME)/.vim/ftindent
 
 emacs:
 	mkdir -p $(HOME)/.emacs.d/

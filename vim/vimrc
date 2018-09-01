@@ -8,16 +8,12 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-flagship'
 Plugin 'junegunn/fzf.vim'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'davidhalter/jedi-vim'
 
 call vundle#end()
-filetype plugin indent on
 
-"colors
-set t_Co=256
-set background=dark
 highlight Normal ctermbg=black ctermfg=white
 highlight LineNr ctermbg=black ctermfg=white
 highlight CursorLineNr ctermbg=black ctermfg=yellow
@@ -26,155 +22,49 @@ highlight Pmenu ctermbg=black ctermfg=yellow
 highlight PmenuSel ctermbg=yellow ctermfg=black
 highlight Visual ctermbg=yellow ctermfg=black
 highlight ExtraWhitespace ctermbg=red ctermbg=red
+match ExtraWhitespace /\s\+$/
 highlight DiffAdd ctermbg=black ctermfg=green
 highlight DiffChange ctermbg=black ctermfg=yellow
 highlight DiffDelete ctermbg=black ctermfg=red
-match ExtraWhitespace /\s\+$/
-if version >= 700
-  autocmd InsertEnter * highlight StatusLine ctermbg=black ctermfg=yellow
-  autocmd InsertLeave * highlight StatusLine ctermbg=black ctermfg=white
-endif
-
-set colorcolumn=80
 highlight ColorColumn ctermbg=grey
+autocmd InsertEnter * highlight StatusLine ctermbg=black ctermfg=yellow
+autocmd InsertLeave * highlight StatusLine ctermbg=black ctermfg=white
 
-"allow backspacing over everything in insert mode
-set backspace=eol,indent,start
-
-"store lots of :cmdline history
-set history=1000
-
-"show incomplete cmds down the bottom
-set showcmd
-"show matching braces
-set showmatch
-set noshowmode
-
-"show relative line numbers
-set relativenumber
-"show current line number
-set number
-
-"find the next match as we type the search
-set incsearch
-"highlight searches by default
-set hlsearch
-"Ignore case in search patterns
-set ignorecase
-"Override the ignore case option if the search pattern contains upper case characters.
-set smartcase
-
-"dont wrap lines
-set nowrap
-"wrap lines at convenient points
-set linebreak
-
-"default indent settings
-set shiftwidth=4
-set softtabstop=4
-set tabstop=8
-set expandtab
-
-set wildmode=list:longest   "make cmdline tab completion similar to bash
-set wildmenu                "enable ctrl-n and ctrl-p to scroll thru matches
-
-"turn on syntax highlighting
-syntax on
-
-"disable mouse
-set mouse=c
-
-"it's good for performance, but idk how
+filetype plugin indent on
+syntax on                       "turn on syntax highlighting
+set backspace=eol,indent,start  "allow backspacing over everything in insert mode
+set history=1000                "store lots of :cmdline history
+set showcmd                     "show incomplete cmds down the bottom
+set showmatch                   "show matching braces
+set noshowmode                  "don't show mode
+set relativenumber              "show relative line numbers
+set number                      "show current line number
+set incsearch                   "search as characters are entered
+set hlsearch                    "highlight searches by default
+set ignorecase                  "Ignore case in search patterns
+set smartcase                   "don't ignore case when inserting uppercase characters
+set nowrap                      "dont wrap lines
+set linebreak                   "wrap lines at convenient points
+set wildmode=longest,full       "complete longest common string, then each full match
+set wildmenu                    "visual auto complete for command menu
+set mouse=c                     "disable mouse
+set shiftround                  "round to multiple of shift width when adjusting indentation
+set shiftwidth=4                "number of spaces for each step of auto indent
+set softtabstop=4               "number of spaces per tab when editing
+set tabstop=8                   "number of visual spaces per tab
+set expandtab                   "tabs are spaces
 set lazyredraw
-
 set noundofile
 set noswapfile
-
 set rtp+=~/.fzf
-
 set autowrite
-
-set laststatus=2
-set statusline=[%n]\ 
-set statusline+=%F\ 
-set statusline+=%{fugitive#statusline()}
-set statusline+=%y
-set statusline+=\[%{mode()}\]
-set statusline+=%m
-set statusline+=%r
-set statusline+=%=%v\ 
-set statusline+=(%l/%L)
-
-"little courtesy please
 set splitright
 set splitbelow
-
-"load ftplugins and indent files
-filetype plugin on
-filetype indent on
-
-
-au FileType python call PYTHON()
-function! PYTHON()
-    set makeprg=flake8\ --max-line-length=120\ %:S
-    set errorformat=%f:%l:%c:\ %t%n\ %m
-endfunc
-
-au FileType json call JSON()
-function! JSON()
-    set syntax=off
-endfunc
-
-au FileType yaml call YAML()
-function! YAML()
-    set shiftwidth=2
-    set softtabstop=2
-endfunc
-
-au FileType html call HTML()
-function! HTML()
-    set shiftwidth=2
-    set softtabstop=2
-endfunc
-
-au FileType markdown call MD()
-function! MD()
-    set tw=79
-endfunc
-
-au FileType asciidoc call ADOC()
-function! ADOC()
-    set syntax=asciidoc
-    set tw=79
-    set formatoptions=tcqn
-endfunc
-
-au FileType go call GO()
-function! GO()
-    set noexpandtab
-endfunc
-
-au FileType php call PHP()
-function! PHP()
-    set noexpandtab
-    set tabstop=8
-    set softtabstop=8
-    set shiftwidth=8
-    set list
-    set listchars=tab:>-
-endfunc
-
-"MAPPINGS
-" :map   :noremap  :unmap     Normal, Visual, Select, Operator-pending
-" :nmap  :nnoremap :nunmap    Normal
-" :vmap  :vnoremap :vunmap    Visual and Select
-" :smap  :snoremap :sunmap    Select
-" :xmap  :xnoremap :xunmap    Visual
-" :omap  :onoremap :ounmap    Operator-pending
-" :map!  :noremap! :unmap!    Insert and Command-line
-" :imap  :inoremap :iunmap    Insert
-" :lmap  :lnoremap :lunmap    Insert, Command-line, Lang-Arg
-" :cmap  :cnoremap :cunmap    Command-line
+set laststatus=2
+set showtabline=0
+set background=dark
+set completeopt=longest,menuone
+set colorcolumn=80
 
 let mapleader="\<Space>"
 let maplocalleader=","
@@ -191,7 +81,7 @@ noremap <Left> <Nop>
 noremap <Right> <Nop>
 noremap ı i
 noremap Y y$
-noremap <leader>c :copen<CR>
+noremap <leader>c :copen<CR>    "open quickfix
 
 nnoremap <leader>w :w<CR>
 nnoremap <leader>q :q<CR>
@@ -202,23 +92,12 @@ nnoremap <silent> $ g$
 nnoremap <C-p> :Files<CR>
 nnoremap L :bprevious<CR>
 nnoremap H :bnext<CR>
-nnoremap <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
+nnoremap <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR> "delete trailing whitespace
 
-inoremap <Up> <Nop>
-inoremap <Down> <Nop>
-inoremap <Left> <Nop>
-inoremap <Right> <Nop>
 inoremap jk <esc>
 inoremap <C-e> <C-o>$
 inoremap <C-a> <C-o>0
-inoremap <C-d> <C-o>x
 
-" ABBREVIATIONS
-func! Eatchar(pat)
-  let c = nr2char(getchar(0))
-  return (c =~ a:pat) ? '' : c
-endfunc
-
-iabbr cnslg console.log();jkhi<C-R>=Eatchar('\s')<CR>
-iabbr ipdb import ipdb; ipdb.set_trace()<C-R>=Eatchar('\s')<CR>
-iabbr srak self, request, *args, **kwargs<C-R>=Eatchar('\s')<CR>
+iabbr cnslg console.log();<Esc>hi
+iabbr ipdb import ipdb; ipdb.set_trace()<Esc>
+iabbr srak self, request, *args, **kwargs<Esc>
