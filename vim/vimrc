@@ -97,6 +97,7 @@ nnoremap <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR> "delete traili
 inoremap jk <esc>
 inoremap <C-e> <C-o>$
 inoremap <C-a> <C-o>0
+inoremap <S-Tab> <C-V><Tab>
 
 iabbr cnslg console.log();<Esc>hi
 iabbr ipdb import ipdb; ipdb.set_trace()<Esc>
