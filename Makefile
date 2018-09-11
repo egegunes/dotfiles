@@ -12,7 +12,7 @@ vim:
 	mkdir -p $(HOME)/.vim/
 	ln -sfn $(CURDIR)/vim/vimrc $(HOME)/.vim/vimrc
 	ln -sfn $(CURDIR)/vim/ftplugin $(HOME)/.vim/ftplugin
-	ln -sfn $(CURDIR)/vim/ftindent $(HOME)/.vim/ftindent
+	ln -sfn $(CURDIR)/vim/indent $(HOME)/.vim/indent
 
 emacs:
 	mkdir -p $(HOME)/.emacs.d/
