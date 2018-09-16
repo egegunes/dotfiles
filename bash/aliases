@@ -42,3 +42,5 @@ alias localip="sudo ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | gre
 alias json="python -m json.tool"
 
 alias emacs="emacs -nw"
+
+alias t="$HOME/Tasks/bin/todo.sh -d $HOME/Tasks/bin/todo.cfg"
