@@ -1,6 +1,6 @@
 .PHONY: all bash vim emacs git tmux dconf
 
-all: bash vim git dconf
+all: bash vim git
 
 bash:
 	for file in $(CURDIR)/bash/*; do \
