@@ -44,3 +44,6 @@ alias json="python -m json.tool"
 alias emacs="emacs -nw"
 
 alias t="$HOME/Tasks/bin/todo.sh -d $HOME/Tasks/bin/todo.cfg"
+alias waiting="t ls @waiting"
+alias review="t ls @review"
+alias computer="t ls @computer"
