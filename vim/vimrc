@@ -12,6 +12,7 @@ Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-flagship'
 Plugin 'junegunn/fzf.vim'
 Plugin 'ledger/vim-ledger'
+Plugin 'fatih/vim-go'
 
 call vundle#end()
 
