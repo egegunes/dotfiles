@@ -13,6 +13,7 @@ Plugin 'tpope/vim-flagship'
 Plugin 'junegunn/fzf.vim'
 Plugin 'ledger/vim-ledger'
 Plugin 'fatih/vim-go'
+Plugin 'airblade/vim-gitgutter'
 
 call vundle#end()
 
