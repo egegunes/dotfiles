@@ -47,3 +47,6 @@ alias t="$HOME/Tasks/bin/todo.sh -d $HOME/Tasks/bin/todo.cfg"
 alias waiting="t ls @waiting"
 alias review="t ls @review"
 alias computer="t ls @computer"
+
+alias redmine="/home/egegunes/Dev/redmine-cli/venv/bin/redmine"
+alias capture="/home/egegunes/Dev/todoist-capture/venv/bin/capture"
