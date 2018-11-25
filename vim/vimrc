@@ -107,3 +107,4 @@ iabbr cnslg console.log();<Esc>hi
 iabbr ipdb import ipdb; ipdb.set_trace()<Esc>
 iabbr pdb import pdb; pdb.set_trace()<Esc>
 iabbr srak self, request, *args, **kwargs<Esc>
+iabbr gowr w http.ResponseWriter, r *http.Request) {<CR>}<Esc>k
