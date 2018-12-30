@@ -14,6 +14,7 @@ Plugin 'junegunn/fzf.vim'
 Plugin 'ledger/vim-ledger'
 Plugin 'fatih/vim-go'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'SirVer/ultisnips'
 
 call vundle#end()
 
@@ -106,8 +107,6 @@ inoremap <C-e> <C-o>$
 inoremap <C-a> <C-o>0
 inoremap <S-Tab> <C-V><Tab>
 
-iabbr cnslg console.log();<Esc>hi
-iabbr ipdb import ipdb; ipdb.set_trace()<Esc>
-iabbr pdb import pdb; pdb.set_trace()<Esc>
-iabbr srak self, request, *args, **kwargs<Esc>
-iabbr gowr w http.ResponseWriter, r *http.Request) {<CR>}<Esc>k
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"

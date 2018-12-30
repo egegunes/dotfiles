@@ -1,0 +1,13 @@
+snippet ifmain "ifmain" b
+if __name__ == "__main__":
+    ${1:${VISUAL:main}}()
+endsnippet
+
+snippet srak "srak" b
+def ${1:${VISUAL:get}}(self, request, *args, **kwargs):
+    pass
+endsnippet
+
+snippet debug "debug" b
+import ${1:ipdb}; ${2:ipdb}.set_trace()
+endsnippet
