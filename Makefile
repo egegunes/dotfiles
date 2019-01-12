@@ -22,6 +22,7 @@ git:
 	ln -sfn $(CURDIR)/git/gitconfig $(HOME)/.gitconfig
 
 tmux:
+	git clone https://github.com/arl/tmux-gitbar.git ~/.tmux-gitbar
 	ln -sfn $(CURDIR)/tmux/tmux.conf $(HOME)/.tmux.conf
 
 dconf:
