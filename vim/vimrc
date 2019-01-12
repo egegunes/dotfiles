@@ -97,6 +97,8 @@ nnoremap <silent> k gk
 nnoremap <silent> 0 g0
 nnoremap <silent> $ g$
 nnoremap <C-p> :Files<CR>
+nnoremap <C-n> :Buffers<CR>
+nnoremap <C-t> :Tags<CR>
 nnoremap L :bprevious<CR>
 nnoremap H :bnext<CR>
 nnoremap <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR> "delete trailing whitespace
