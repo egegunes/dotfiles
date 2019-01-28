@@ -15,7 +15,6 @@ Plugin 'ledger/vim-ledger'
 Plugin 'fatih/vim-go'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'SirVer/ultisnips'
-Plugin 'vimwiki/vimwiki'
 
 call vundle#end()
 
@@ -113,5 +112,3 @@ inoremap <S-Tab> <C-V><Tab>
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-
-let g:vimwiki_list = [{'path': '~/wiki', 'syntax': 'markdown', 'ext': '.md', 'index': 'README'}]
