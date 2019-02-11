@@ -92,6 +92,7 @@ noremap <leader>e :Lexplore<CR>
 
 nnoremap <leader>w :w<CR>
 nnoremap <leader>q :q<CR>
+nnoremap <leader>t :term<CR>
 nnoremap <silent> j gj
 nnoremap <silent> k gk
 nnoremap <silent> 0 g0
