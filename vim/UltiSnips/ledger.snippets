@@ -1,0 +1,17 @@
+snippet e "entry" w
+`!v strftime("%Y-%m-%d")` ${1}
+endsnippet
+
+snippet savings "savings" w
+`!v strftime("%Y-%m-%d")` Savings
+    Assets:Cash:Changes					  ${1}
+    Assets:Cash:TRY
+endsnippet
+
+snippet adjustments "adjustments" w
+`!v strftime("%Y-%m-%d")` Adjustments
+    Assets:Cash:Changes					  =${1}
+    Assets:Cash:TRY					  =${2}
+    Assets:YKB:TRY					  =${3}
+    Equity:Adjustments
+endsnippet
