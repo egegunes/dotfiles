@@ -17,6 +17,7 @@
     amend = commit --amend --reuse-message=HEAD
     head = show HEAD
     wip = "!$EDITOR $(git ls-files -m)"
+    wc = whatchanged -p --abbrev-commit --pretty=medium
 
 [status]
     showUntrackedFiles = all
