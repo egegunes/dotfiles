@@ -68,7 +68,6 @@ set laststatus=2
 set showtabline=0
 set background=dark
 set completeopt=longest,menuone
-set colorcolumn=80
 
 let mapleader="\<Space>"
 let maplocalleader=","
