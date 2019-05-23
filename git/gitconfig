@@ -11,7 +11,7 @@
 
 [alias]
     s = status -s
-    l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
+    l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ci) %C(bold blue)<%an>%Creset'
     stash-all = stash save --include-untracked
     # Amend the currently staged files to the latest commit
     amend = commit --amend --reuse-message=HEAD
