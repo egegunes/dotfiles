@@ -15,3 +15,9 @@ snippet adjustments "adjustments" w
     Assets:YKB:TRY					  =${3}
     Equity:Adjustments
 endsnippet
+
+snippet withdraw "withdraw" w
+`!v strftime("%Y-%m-%d")` Withdraw
+    Assets:Cash:TRY					 ${1}
+    Assets:YKB:TRY
+endsnippet
