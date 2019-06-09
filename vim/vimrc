@@ -74,44 +74,34 @@ set completeopt=longest,menuone
 let mapleader="\<Space>"
 let maplocalleader=","
 
-noremap q: :q
-noremap gb :Gblame<CR>
-noremap gl :Commits<CR>
-noremap gd :Gdiff<CR>
-noremap <C-x> :bdelete<CR>
-noremap <leader>h :nohlsearch<CR>
-noremap <Up> <Nop>
-noremap <Down> <Nop>
-noremap <Left> <Nop>
-noremap <Right> <Nop>
-noremap ı i
-noremap Y y$
-noremap <leader>c :copen<CR>    "open quickfix
-noremap <leader>e :Lexplore<CR>
+nnoremap gb :Gblame<CR>
+nnoremap gl :Commits<CR>
+nnoremap gd :Gdiff<CR>
+nnoremap <C-p> :Files<CR>
+nnoremap <C-n> :Buffers<CR>
+nnoremap <C-t> :Tags<CR>
+
+nnoremap L :bprevious<CR>
+nnoremap H :bnext<CR>
+nnoremap <C-x> :bdelete<CR>
+
+nnoremap <Up> <Nop>
+nnoremap <Down> <Nop>
+nnoremap <Left> <Nop>
+nnoremap <Right> <Nop>
+
+nnoremap ı i
+nnoremap Y y$
 
 nnoremap <leader>w :w<CR>
 nnoremap <leader>q :q<CR>
 nnoremap <leader>t :term<CR>
-nnoremap <silent> j gj
-nnoremap <silent> k gk
-nnoremap <silent> 0 g0
-nnoremap <silent> $ g$
-nnoremap <C-p> :Files<CR>
-nnoremap <C-n> :Buffers<CR>
-nnoremap <C-t> :Tags<CR>
-nnoremap L :bprevious<CR>
-nnoremap H :bnext<CR>
-nnoremap <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR> "delete trailing whitespace
-nnoremap <leader>i :GoImports<CR>
-
-" python
-nnoremap <F9> :term ipython3 -i %<CR>
-nnoremap <leader>s :term ipython3<CR>
+nnoremap <leader>e :Lexplore<CR>
+nnoremap <leader>h :nohlsearch<CR>
 
 inoremap jk <esc>
 inoremap <C-e> <C-o>$
 inoremap <C-a> <C-o>0
-inoremap <S-Tab> <C-V><Tab>
 
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
