@@ -15,6 +15,7 @@ Plugin 'ledger/vim-ledger'
 Plugin 'fatih/vim-go'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'SirVer/ultisnips'
+Plugin 'python/black'
 Plugin 'wincent/vcs-jump'
 
 call vundle#end()
