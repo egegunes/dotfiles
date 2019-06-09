@@ -78,8 +78,6 @@ noremap q: :q
 noremap gb :Gblame<CR>
 noremap gl :Commits<CR>
 noremap gd :Gdiff<CR>
-noremap gn :GitGutterNextHunk<CR>
-noremap gp :GitGutterPrevHunk<CR>
 noremap <C-x> :bdelete<CR>
 noremap <leader>h :nohlsearch<CR>
 noremap <Up> <Nop>
