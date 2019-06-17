@@ -80,7 +80,7 @@ nnoremap gd :Gdiff<CR>
 nnoremap <C-p> :Files<CR>
 nnoremap <C-n> :Buffers<CR>
 nnoremap <C-t> :Tags<CR>
-nnoremap <C-v> :VcsJump 
+nnoremap <C-c> :VcsJump 
 
 nnoremap L :bprevious<CR>
 nnoremap H :bnext<CR>
