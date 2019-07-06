@@ -112,7 +112,7 @@ function! ToggleWrap()
     endif
 endfunction
 
-nnoremap <leader>t :call ToggleWrap()<CR>
+nnoremap <leader>r :call ToggleWrap()<CR>
 
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
