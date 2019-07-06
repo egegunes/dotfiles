@@ -104,6 +104,16 @@ inoremap jk <esc>
 inoremap <C-e> <C-o>$
 inoremap <C-a> <C-o>0
 
+function! ToggleWrap()
+    if &wrap
+        setlocal nowrap
+    else
+        setlocal wrap
+    endif
+endfunction
+
+nnoremap <leader>t :call ToggleWrap()<CR>
+
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
