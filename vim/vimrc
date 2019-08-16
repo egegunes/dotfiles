@@ -84,7 +84,12 @@ nnoremap <C-c> :VcsJump
 
 nnoremap L :bprevious<CR>
 nnoremap H :bnext<CR>
-nnoremap <C-x> :bdelete<CR>
+nnoremap <leader>x :bdelete<CR>
+
+nnoremap <leader>n :GitGutterNextHunk<CR>
+nnoremap <leader>p :GitGutterPrevHunk<CR>
+nnoremap <leader>u :GitGutterUndoHunk<CR>
+nnoremap <leader>c :GitGutterPreviewHunk<CR>
 
 nnoremap <Up> <Nop>
 nnoremap <Down> <Nop>
