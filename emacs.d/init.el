@@ -94,60 +94,11 @@
 (global-set-key (kbd "C-;") 'comment-or-uncomment-region)
 (global-set-key (kbd "M-/") 'hippie-expand)
 
-(use-package smart-mode-line
-  :ensure t
-  :config
-  (setq sml/theme 'dark
-        sml/no-confirm-load-theme t)
-  (sml/setup))
-
-(use-package helm
-  :ensure t
-  :bind (("M-x" . helm-M-x)
-	 ("C-x C-f". helm-find-files)
-	 ("C-x b" . helm-mini)
-	 ("M-y" . helm-show-kill-ring))
-  :config (setq helm-buffers-fuzzy-matching t
-                helm-recentf-fuzzy-match    t))
-
-(use-package solarized-theme
-  :ensure t
-  :config (load-theme 'solarized-dark t))
-
-(use-package magit
-  :ensure t
-  :bind (("C-x g" . magit-status)))
-
-(use-package expand-region
-  :ensure t
-  :bind (("C-=" . er/expand-region)))
-
-(use-package projectile
-  :ensure t
-  :bind (("s-p" . projectile-command-map)
-         ("C-c p" . projectile-command-map))
-  :config (projectile-mode +1))
-
-(use-package helm-projectile
-  :ensure t
-  :bind ("M-p" . helm-projectile-find-file)
-  :config (helm-projectile-on))
-
-(use-package go-mode
-  :ensure t
-  :config (add-to-list 'auto-mode-alist '("\\.go\\'" . go-mode)))
-
-(use-package php-mode
-  :ensure t
-  :config (add-to-list 'auto-mode-alist '("\\.php\\'" . php-mode)))
-
 (require 'org)
 (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
 
-(setq org-directory (expand-file-name "~/Dropbox/org"))
-(setq org-agenda-files (list "~/Dropbox/org"
-                             "~/Dropbox/org/work"
-                             "~/Dropbox/org/calendar"))
+(setq org-directory (expand-file-name "~/org"))
+(setq org-agenda-files (list "~/org"))
 (setq org-refile-targets (quote ((nil :maxlevel . 9)
                                  (org-agenda-files :maxlevel . 9))))
 (setq org-refile-allow-creating-parent-nodes (quote confirm))
