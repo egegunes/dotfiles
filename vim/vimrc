@@ -32,6 +32,11 @@ match ExtraWhitespace /\s\+$/
 highlight DiffAdd ctermbg=black ctermfg=green
 highlight DiffChange ctermbg=black ctermfg=yellow
 highlight DiffDelete ctermbg=black ctermfg=red
+highlight diffAdded ctermbg=black ctermfg=green
+highlight diffRemoved ctermbg=black ctermfg=red
+highlight diffChanged ctermbg=black ctermfg=yellow
+highlight diffFile ctermbg=black ctermfg=lightblue
+highlight diffOldFile ctermbg=black ctermfg=magenta
 highlight ColorColumn ctermbg=grey
 autocmd InsertEnter * highlight StatusLine ctermbg=black ctermfg=yellow
 autocmd InsertLeave * highlight StatusLine ctermbg=black ctermfg=white
