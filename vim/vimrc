@@ -82,6 +82,7 @@ let maplocalleader=","
 nnoremap gb :Gblame<CR>
 nnoremap gl :Commits<CR>
 nnoremap gd :Gdiff<CR>
+nnoremap ff :call fzf#run(fzf#wrap({'source': 'git ls-files --exclude-standard --others --cached'}))<CR>
 nnoremap <C-p> :Files<CR>
 nnoremap <C-n> :Buffers<CR>
 nnoremap <C-t> :Tags<CR>
@@ -127,3 +128,5 @@ nnoremap <leader>r :call ToggleWrap()<CR>
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+let g:fzf_layout = {'left': '30%'}
