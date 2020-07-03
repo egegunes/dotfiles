@@ -1,0 +1,39 @@
+snippet deployment "deployment" b
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ${1}
+  labels:
+    app: ${2}
+spec:
+  replicas: ${3}
+  selector:
+    matchLabels:
+      app: ${2}
+  template:
+    metadata:
+      labels:
+        app: ${2}
+    spec:
+      containers:
+      - name: ${2}
+        image: ${4}
+        ports:
+        - containerPort: ${5}
+endsnippet
+
+snippet service "service" b
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: ${1}
+spec:
+  selector:
+    app: ${2}
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: ${3}
+endsnippet
