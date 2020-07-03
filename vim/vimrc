@@ -66,7 +66,7 @@ set expandtab                   "tabs are spaces
 set lazyredraw
 set noundofile
 set noswapfile
-set rtp+=~/.fzf
+set rtp+=~/opt/fzf
 set autowrite
 set splitright
 set splitbelow
