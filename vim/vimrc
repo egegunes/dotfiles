@@ -15,7 +15,6 @@ Plugin 'nathangrigg/vim-beancount'
 Plugin 'fatih/vim-go'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'SirVer/ultisnips'
-Plugin 'wincent/vcs-jump'
 
 call vundle#end()
 
