@@ -73,6 +73,7 @@ set laststatus=2
 set showtabline=0
 set background=dark
 set completeopt=longest,menuone
+set conceallevel=0
 
 let mapleader="\<Space>"
 let maplocalleader=","
