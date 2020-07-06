@@ -1,4 +1,4 @@
 #!/bin/bash
 # vim: set filetype=sh :
 
-export PS1=" \\$ "
+export PS1="\\$ "
