@@ -1,4 +1,4 @@
-for file in ~/.{bashrc,aliases,functions,exports}; do
+for file in ~/.{bashrc,aliases,functions,exports,bash_prompt}; do
     if [[ -r "$file" ]] && [[ -f "$file" ]]; then
         source "$file"
     fi
