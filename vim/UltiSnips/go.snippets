@@ -2,3 +2,13 @@ snippet handlerfunc "handlerfunc" b
 func ${1:handlerfunc}(w http.ResponseWriter, r *http.Request) {
 }
 endsnippet
+
+snippet cobracommand "cobracommand" b
+var ${1} = &cobra.Command{
+    Use: "${2}",
+    Short: "${3}",
+    Long: "${3}",
+    Run: func(cmd *cobra.Command, args []string) {
+    }
+}
+endsnippet
