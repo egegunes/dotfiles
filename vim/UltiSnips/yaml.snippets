@@ -37,3 +37,15 @@ spec:
       port: 80
       targetPort: ${3}
 endsnippet
+
+snippet secret "secret" b
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: ${1}
+  type: Opaque
+  data:
+    username: ${2}
+    password: ${3}
+endsnippet
