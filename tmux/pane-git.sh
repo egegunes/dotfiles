@@ -3,7 +3,7 @@
 function branch {
     local path=$1
 
-    local branch=$(git -C $path branch 2>/dev/null)
+    local branch=$(git -C $path branch 2>/dev/null | grep -E "^\*")
 
     if [[ ! -z $branch ]]; then
         echo "($branch)"
