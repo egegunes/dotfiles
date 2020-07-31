@@ -17,7 +17,7 @@ export LC_ALL="en_US.UTF-8";
 export GIT_PS1_SHOWDIRTYSTATE=true
 export GIT_PS1_SHOWUNTRACKEDFILES=true
 
-#export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
+export PROMPT_COMMAND="history -a; history -n"
 
 export DISABLE_HOOKS=false
 
