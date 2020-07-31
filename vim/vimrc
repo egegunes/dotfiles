@@ -93,7 +93,6 @@ nnoremap ff :call fzf#run(fzf#wrap({'source': 'git ls-files --exclude-standard -
 nnoremap <C-p> :Files<CR>
 nnoremap <C-n> :Buffers<CR>
 nnoremap <C-t> :Tags<CR>
-nnoremap <C-c> :VcsJump 
 
 nnoremap L :bprevious<CR>
 nnoremap H :bnext<CR>
