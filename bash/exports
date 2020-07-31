@@ -20,3 +20,7 @@ export GIT_PS1_SHOWUNTRACKEDFILES=true
 #export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
 export DISABLE_HOOKS=false
+
+if [ -f ~/.local_exports ]; then
+    source ~/.local_exports
+fi
