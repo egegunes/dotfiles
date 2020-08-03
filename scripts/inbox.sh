@@ -11,6 +11,7 @@ function commit {
 
     cd $INBOX_PATH
 
+    git pull
     git add $file
     git commit -m "$mode $file from $HOSTNAME" &>/dev/null
     git push
