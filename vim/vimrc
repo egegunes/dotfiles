@@ -47,6 +47,8 @@ highlight ExtraWhitespace ctermbg=red ctermbg=red
 match ExtraWhitespace /\s\+$/
 autocmd InsertEnter * highlight StatusLine ctermbg=black ctermfg=yellow
 autocmd InsertLeave * highlight StatusLine ctermbg=black ctermfg=white
+highlight SpellBad ctermbg=red ctermfg=black
+highlight SpellRare ctermbg=yellow ctermfg=black
 
 filetype plugin indent on
 syntax on                       "turn on syntax highlighting
