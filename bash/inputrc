@@ -39,8 +39,8 @@ set skip-completed-text on
 "\e[1;5C": forward-word   # ctrl+right
 "\e[1;5D": backward-word  # ctrl+left
 
-"\ek": history-search-forward  # alt+k
-"\ej": history-search-backward  # alt+j
+"\ej": history-search-forward  # alt+j
+"\ek": history-search-backward  # alt+k
 "\el": forward-word   # alt+l
 "\eh": backward-word  # alt+h
 
