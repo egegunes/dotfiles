@@ -45,8 +45,7 @@ function main {
     elif [[ $1 == "editor" ]]; then
         run_editor
     else
-        echo "Unknown command: $1"
-        exit 1
+        open_terminal
     fi
 }
 
