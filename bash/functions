@@ -22,3 +22,7 @@ function extract() {
 function random() {
     cat /dev/urandom | tr -cd "a-zA-Z0-9" | fold -w $1 | head -n 1
 }
+
+if [ -f ~/.local_functions ]; then
+    source ~/.local_functions
+fi
