@@ -119,6 +119,9 @@ nnoremap <leader>q :q<CR>
 nnoremap <leader>t :term<CR>
 nnoremap <leader>e :Lexplore<CR>
 nnoremap <leader>h :nohlsearch<CR>
+nnoremap <leader>b "zy3w:exe "! jira browse ".@z.""<CR>
+nnoremap <leader>v "zy3w:exe "! jira view ".@z.""<CR>
+
 
 inoremap jk <esc>
 inoremap <C-e> <C-o>$
