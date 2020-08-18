@@ -35,6 +35,7 @@ highlight diffChanged ctermbg=black ctermfg=yellow
 highlight diffFile ctermbg=black ctermfg=lightblue
 highlight diffOldFile ctermbg=black ctermfg=magenta
 highlight ColorColumn ctermbg=grey
+highlight SignColumn ctermbg=black
 highlight markdownCodeDelimiter ctermbg=black ctermfg=red
 highlight markdownHeadingDelimiter ctermbg=black ctermfg=red
 highlight markdownH1 ctermbg=black ctermfg=red
