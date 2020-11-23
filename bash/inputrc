@@ -1,5 +1,3 @@
-set editing-mode vi
-
 set bell-style none
 
 # List all matches in case multiple possible completions are possible
