@@ -120,9 +120,11 @@ nnoremap <leader>q :q<CR>
 nnoremap <leader>t :term<CR>
 nnoremap <leader>e :Lexplore<CR>
 nnoremap <leader>h :nohlsearch<CR>
-nnoremap <leader>b "zy3w:exe "! jira browse ".@z.""<CR>
-nnoremap <leader>v "zy3w:exe "! jira view ".@z.""<CR>
-
+nnoremap <leader>jb "zy3w:exe "! jira browse ".@z.""<CR>
+nnoremap <leader>jv "zy3w:exe "! jira view ".@z.""<CR>
+nnoremap <leader>i :setlocal autoread<CR> :!goimports -w %<CR><CR>
+nnoremap <leader>f :setlocal autoread<CR> :!go fmt %<CR><CR>
+nnoremap <leader>b :setlocal autoread<CR> :!black %<CR><CR>
 
 inoremap jk <esc>
 inoremap <C-e> <C-o>$
