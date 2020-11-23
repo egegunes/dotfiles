@@ -1,4 +1,4 @@
-function extract() {
+function extract {
     if [ -f $1 ] ; then
         case $1 in
             *.tar.bz2)   tar xvjf $1     ;;
@@ -19,8 +19,12 @@ function extract() {
     fi
 }
 
-function random() {
+function random {
     cat /dev/urandom | tr -cd "a-zA-Z0-9" | fold -w $1 | head -n 1
+}
+
+function set-context {
+    kubectl config set-context --current --namespace=$1
 }
 
 if [ -f ~/.local_functions ]; then

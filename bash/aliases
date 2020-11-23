@@ -9,6 +9,9 @@ alias df='df -kTh'
 
 alias gpg="gpg2"
 
+alias clip="xclip -i -selection clipboard"
+alias teec="tee >(xclip -i -selection clipboard)"
+
 if [ -f ~/.local_aliases ]; then
     source ~/.local_aliases
 fi
