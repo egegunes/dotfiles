@@ -15,6 +15,7 @@ Plugin 'nathangrigg/vim-beancount'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'SirVer/ultisnips'
 Plugin 'Yggdroot/indentLine'
+Plugin 'jpalardy/vim-slime'
 
 call vundle#end()
 
@@ -147,3 +148,9 @@ command CopyMode call CopyMode()
 
 let g:fzf_preview_window = 'up:30%'
 let g:fzf_layout = {'left': '30%'}
+
+let g:slime_target = "tmux"
+let g:slime_paste_file = "$HOME/.slime_paste"
+let g:slime_default_config = {"socket_name": "default", "target_pane": ":.1"}
+let g:slime_python_ipython = 1
+
