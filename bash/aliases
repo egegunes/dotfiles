@@ -8,6 +8,7 @@ alias du='du -kh'
 alias df='df -kTh'
 
 alias gpg="gpg2"
+alias i="inbox.sh editor"
 
 alias clip="xclip -i -selection clipboard"
 alias teec="tee >(xclip -i -selection clipboard)"

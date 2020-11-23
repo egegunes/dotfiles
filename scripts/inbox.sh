@@ -1,6 +1,6 @@
 #!/bin/bash
 
-INBOX_PATH=$HOME/INBOX
+INBOX_PATH=$HOME/var/INBOX
 CONFIG_PATH=$HOME/.inbox.yml
 TERMINAL=alacritty
 TERMINALOPTS="--config-file $CONFIG_PATH --command"
@@ -32,7 +32,7 @@ function run_editor {
     fi
 
     cp $tmpfile "$INBOX_PATH/$filename"
-    commit "add" "$filename"
+    commit "add" "$filename" &> /dev/null &
 }
 
 function open_terminal {
