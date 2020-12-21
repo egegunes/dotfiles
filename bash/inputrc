@@ -43,4 +43,4 @@ set skip-completed-text on
 "\ek": history-search-backward  # alt+k
 "\el": forward-word   # alt+l
 "\eh": backward-word  # alt+h
-
+"\em": accept-line # alt+m
