@@ -22,5 +22,7 @@ shopt -s histappend
 shopt -s checkwinsize
 shopt -s globstar
 shopt -s nocaseglob
+shopt -s cmdhist
+shopt -s lithist
 
 stty -ixon
