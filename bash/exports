@@ -20,6 +20,8 @@ export GIT_PS1_SHOWUNTRACKEDFILES=true
 
 export DISABLE_HOOKS=false
 
+export PROMPT_COMMAND='echo "$(date "+%Y-%m-%d.%H:%M:%S") $(pwd) $(history 1)" >> ~/var/log/bash-history-$(date "+%Y-%m-%d").log'
+
 if [ -f ~/.local_exports ]; then
     source ~/.local_exports
 fi
