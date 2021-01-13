@@ -51,8 +51,9 @@ autocmd InsertLeave * highlight StatusLine ctermbg=black ctermfg=white
 highlight SpellBad ctermbg=red ctermfg=black
 highlight SpellRare ctermbg=yellow ctermfg=black
 
-filetype plugin indent on
-syntax on                       "turn on syntax highlighting
+filetype plugin on
+filetype indent off
+syntax off
 set backspace=eol,indent,start  "allow backspacing over everything in insert mode
 set history=1000                "store lots of :cmdline history
 set showcmd                     "show incomplete cmds down the bottom
