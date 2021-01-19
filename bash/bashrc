@@ -26,3 +26,5 @@ shopt -s cmdhist
 shopt -s lithist
 
 stty -ixon
+
+bind -m emacs-standard '"\C-r": "\C-e \C-u\C-y\ey\C-u"$(custom-history)"\e\C-e\er"'
