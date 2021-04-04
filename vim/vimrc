@@ -95,7 +95,8 @@ nnoremap gb :Gblame<CR>
 nnoremap gl :Commits<CR>
 nnoremap gd :Gdiff<CR>
 nnoremap ff :call fzf#run(fzf#wrap({'source': 'git ls-files --exclude-standard --others --cached'}))<CR>
-nnoremap <C-p> :Files<CR>
+nnoremap <C-p> :GitFiles<CR>
+nnoremap <C-]> :Files<CR>
 nnoremap <C-n> :Buffers<CR>
 nnoremap <C-t> :Tags<CR>
 
@@ -130,6 +131,8 @@ nnoremap <leader>b :setlocal autoread<CR> :!black %<CR><CR>
 inoremap jk <esc>
 inoremap <C-e> <C-o>$
 inoremap <C-a> <C-o>0
+
+map <leader>g :execute " grep -srnw --binary-files=without-match --exclude-dir=.git . -e " . expand("<cword>") . " " <bar> cwindow<CR>
 
 function! ToggleWrap()
     if &wrap
