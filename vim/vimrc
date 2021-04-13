@@ -152,8 +152,8 @@ function! CopyMode()
 endfunction
 command CopyMode call CopyMode()
 
-let g:fzf_preview_window = 'up:30%'
-let g:fzf_layout = {'left': '30%'}
+let g:fzf_preview_window = 'right:50%'
+let g:fzf_layout = {'down': '30%'}
 
 let g:slime_target = "tmux"
 let g:slime_paste_file = "$HOME/.slime_paste"
