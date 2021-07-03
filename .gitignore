@@ -1,3 +1,6 @@
 .emacs~
 emacs.d/*
 !emacs.d/init.el
+vim/bundle
+vim/plugin
+vim/.netrwhist

@@ -11,11 +11,13 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-flagship'
 Plugin 'junegunn/fzf.vim'
-Plugin 'nathangrigg/vim-beancount'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'SirVer/ultisnips'
 Plugin 'Yggdroot/indentLine'
 Plugin 'jpalardy/vim-slime'
+Plugin 'mhinz/vim-signify'
+Plugin 'prabirshrestha/vim-lsp'
+Plugin 'mattn/vim-lsp-settings'
+Plugin 'prabirshrestha/asyncomplete.vim'
+Plugin 'prabirshrestha/asyncomplete-lsp.vim'
 
 call vundle#end()
 
@@ -50,6 +52,11 @@ autocmd InsertEnter * highlight StatusLine ctermbg=black ctermfg=yellow
 autocmd InsertLeave * highlight StatusLine ctermbg=black ctermfg=white
 highlight SpellBad ctermbg=red ctermfg=black
 highlight SpellRare ctermbg=yellow ctermfg=black
+highlight PopupWindow ctermbg=lightblue guibg=lightblue
+highlight LspErrorHighlight ctermbg=black ctermfg=red
+highlight LspWarningHighlight ctermbg=black ctermfg=yellow
+highlight LspInformationHighlight ctermbg=black ctermfg=blue
+highlight LspHintHighlight ctermbg=black ctermfg=gray
 
 filetype plugin on
 filetype indent off
@@ -79,6 +86,7 @@ set lazyredraw
 set noundofile
 set noswapfile
 set rtp+=~/opt/fzf
+set rtp+=/usr/local/opt/fzf
 set autowrite
 set splitright
 set splitbelow
@@ -87,27 +95,24 @@ set showtabline=0
 set background=dark
 set completeopt=longest,menuone
 set conceallevel=0
+set updatetime=100
+set iskeyword+=\-
+set cot+=preview
 
 let mapleader="\<Space>"
 let maplocalleader=","
 
 nnoremap gb :Gblame<CR>
 nnoremap gl :Commits<CR>
-nnoremap gd :Gdiff<CR>
-nnoremap ff :call fzf#run(fzf#wrap({'source': 'git ls-files --exclude-standard --others --cached'}))<CR>
+nnoremap gd :Gvdiffsplit<CR>
 nnoremap <C-p> :GitFiles<CR>
-nnoremap <C-]> :Files<CR>
+nnoremap <C-]> :call fzf#vim#files(expand("%:p:h"), fzf#vim#with_preview({'options': ['--layout=reverse', '--info=inline', '--preview-window=right:50%:wrap']}))<CR>
+nnoremap <C-i> :Ag<CR>
 nnoremap <C-n> :Buffers<CR>
 nnoremap <C-t> :Tags<CR>
 
 nnoremap L :bprevious<CR>
 nnoremap H :bnext<CR>
-nnoremap <leader>x :bdelete<CR>
-
-nnoremap <leader>n :GitGutterNextHunk<CR>
-nnoremap <leader>p :GitGutterPrevHunk<CR>
-nnoremap <leader>u :GitGutterUndoHunk<CR>
-nnoremap <leader>c :GitGutterPreviewHunk<CR>
 
 nnoremap <Up> <Nop>
 nnoremap <Down> <Nop>
@@ -127,12 +132,23 @@ nnoremap <leader>jv "zy3w:exe "! jira view ".@z.""<CR>
 nnoremap <leader>i :setlocal autoread<CR> :!goimports -w %<CR><CR>
 nnoremap <leader>f :setlocal autoread<CR> :!go fmt %<CR><CR>
 nnoremap <leader>b :setlocal autoread<CR> :!black %<CR><CR>
+nnoremap <leader>c :copen<CR>
+nnoremap <leader>l :LspHover<CR>
+nnoremap <leader>d :LspDefinition<CR>
+nnoremap <leader>g :LspReferences<CR>
+nnoremap <leader>x :bdelete<CR>
+nnoremap <leader>u :SignifyHunkUndo<CR>
+nnoremap <leader>ss :mksession! ~/.vimsessions/
+nnoremap <leader>sl :source ~/.vimsessions/
 
 inoremap jk <esc>
 inoremap <C-e> <C-o>$
 inoremap <C-a> <C-o>0
 
-map <leader>g :execute " grep -srnw --binary-files=without-match --exclude-dir=.git . -e " . expand("<cword>") . " " <bar> cwindow<CR>
+if executable('ag')
+  set grepprg=ag\ --nogroup\ --nocolor
+endif
+nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 
 function! ToggleWrap()
     if &wrap
@@ -147,16 +163,50 @@ nnoremap <leader>r :call ToggleWrap()<CR>
 function! CopyMode()
     setlocal nonumber
     setlocal norelativenumber
-    :IndentLinesDisable
-    :GitGutterDisable
+    :SignifyDisableAll
+endfunction
+function! EndCopyMode()
+    setlocal number
+    setlocal relativenumber
+    :SignifyEnableAll
 endfunction
 command CopyMode call CopyMode()
+command EndCopyMode call EndCopyMode()
 
+let g:fzf_layout = {'up':'~90%', 'window': { 'width': 0.8, 'height': 0.8,'yoffset':0.5,'xoffset': 0.5, 'highlight': 'Todo', 'border': 'sharp' } }
 let g:fzf_preview_window = 'right:50%'
-let g:fzf_layout = {'down': '30%'}
 
 let g:slime_target = "tmux"
 let g:slime_paste_file = "$HOME/.slime_paste"
 let g:slime_default_config = {"socket_name": "default", "target_pane": ":.1"}
 let g:slime_python_ipython = 1
 
+autocmd BufRead * syntax off
+autocmd FileType diff,git syntax on
+
+function! TempFile()
+    let l:tmpfile = tempname()
+    execute "write " . l:tmpfile
+endfunction
+command TempFile call TempFile()
+
+let g:notes_path = "~/Documents/notes/"
+function! Note()
+    let l:filename = strftime("%s")
+    execute "put =strftime('%a %b %d, %Y  %H:%M')"
+    execute 'normal ggddpO'
+    execute "write " . g:notes_path . l:filename . ".txt"
+endfunction
+command Note call Note()
+
+function! Delete()
+    execute "!rm %"
+    execute "quit"
+endfunction
+command Delete call Delete()
+
+let g:lsp_document_highlight_enabled = 0
+let g:lsp_diagnostics_enabled = 1
+let g:lsp_diagnostics_echo_cursor = 1
+let g:lsp_diagnostics_signs_enabled = 0
+let g:lsp_diagnostics_highlights_enabled = 1

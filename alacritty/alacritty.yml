@@ -90,18 +90,18 @@ window:
 # Font configuration
 font:
   normal:
-    family: monospace
+    family: Monaco
     style: Regular
   bold:
-    family: monospace
+    family: Monaco
     style: Bold
   italic:
-    family: monospace
+    family: Monaco
     style: Italic
   bold_italic:
-    family: monospace
+    family: Monaco
     style: Bold Italic
-  size: 16.0
+  size: 22.0
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
@@ -130,7 +130,7 @@ font:
   #
   # This is a global setting and will require a log out or restart to take
   # effect.
-  #use_thin_strokes: true
+  use_thin_strokes: true
 
 # If `true`, bold text is drawn using the bright color variants.
 #draw_bold_text_with_bright_colors: false
@@ -236,7 +236,7 @@ colors:
 # Specifying a `duration` of `0` will disable the visual bell.
 bell:
   animation: EaseOutExpo
-  duration: 50
+  duration: 0
   color: '#ffffff'
 
 # Background opacity

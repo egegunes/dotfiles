@@ -1,5 +1,5 @@
 [user]
-    email = egegunes@gmail.com
+    email = ege.gunes@percona.com
     name = Ege Güneş
     signingKey = 5A1D0305
 
@@ -11,11 +11,12 @@
 
 [alias]
     s = status -s
+    sd = status -s .
     l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ci) %C(bold blue)<%an>%Creset'
     stash-all = stash save --include-untracked
     # Amend the currently staged files to the latest commit
     amend = commit --amend --reuse-message=HEAD
-    head = show HEAD
+    head = "!exec $EDITOR $(git diff-tree --no-commit-id --name-only -r HEAD)"
     wip = "!$EDITOR $(git ls-files -m)"
     wc = whatchanged -p --abbrev-commit --pretty=medium
 
@@ -30,3 +31,8 @@
 
 [include]
     path = ~/.gitidentity
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
