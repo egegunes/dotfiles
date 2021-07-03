@@ -16,3 +16,5 @@ alias teec="tee >(xclip -i -selection clipboard)"
 if [ -f ~/.local_aliases ]; then
     source ~/.local_aliases
 fi
+
+alias venv="source ./venv/bin/activate"
