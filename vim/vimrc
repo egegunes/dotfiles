@@ -7,11 +7,11 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-rhubarb'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-flagship'
 Plugin 'junegunn/fzf.vim'
-Plugin 'Yggdroot/indentLine'
 Plugin 'jpalardy/vim-slime'
 Plugin 'mhinz/vim-signify'
 Plugin 'prabirshrestha/vim-lsp'
@@ -107,6 +107,7 @@ nnoremap gb :Gblame<CR>
 nnoremap gl :Commits<CR>
 nnoremap gd :Gvdiffsplit<CR>
 nnoremap <C-p> :GitFiles<CR>
+nnoremap <C-[> :GitFiles?<CR>
 nnoremap <C-]> :call fzf#vim#files(expand("%:p:h"), fzf#vim#with_preview({'options': ['--layout=reverse', '--info=inline', '--preview-window=right:50%:wrap']}))<CR>
 nnoremap <C-i> :Ag<CR>
 nnoremap <C-n> :Buffers<CR>
@@ -137,6 +138,8 @@ nnoremap <leader>c :copen<CR>
 nnoremap <leader>l :LspHover<CR>
 nnoremap <leader>d :LspDefinition<CR>
 nnoremap <leader>g :LspReferences<CR>
+nnoremap <leader>n :LspNextError<CR>
+nnoremap <leader>N :LspPreviousError<CR>
 nnoremap <leader>x :bdelete<CR>
 nnoremap <leader>u :SignifyHunkUndo<CR>
 nnoremap <leader>ss :mksession! ~/.vimsessions/
