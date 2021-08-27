@@ -106,10 +106,9 @@ let maplocalleader=","
 nnoremap gb :Gblame<CR>
 nnoremap gl :Commits<CR>
 nnoremap gd :Gvdiffsplit<CR>
-nnoremap <C-p> :GitFiles<CR>
-nnoremap <C-[> :GitFiles?<CR>
-nnoremap <C-]> :call fzf#vim#files(expand("%:p:h"), fzf#vim#with_preview({'options': ['--layout=reverse', '--info=inline', '--preview-window=right:50%:wrap']}))<CR>
-nnoremap <C-i> :Ag<CR>
+nnoremap <C-p> :Files<CR>
+nnoremap <C-]> :Ag<CR>
+nnoremap <leader>s :call fzf#vim#files(expand("%:p:h"), fzf#vim#with_preview({'options': ['--layout=reverse', '--info=inline', '--preview-window=right:50%:wrap']}))<CR>
 nnoremap <C-n> :Buffers<CR>
 nnoremap <C-t> :Tags<CR>
 
