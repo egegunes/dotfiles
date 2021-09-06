@@ -103,12 +103,8 @@ set cot+=preview
 let mapleader="\<Space>"
 let maplocalleader=","
 
-nnoremap gb :Gblame<CR>
-nnoremap gl :Commits<CR>
-nnoremap gd :Gvdiffsplit<CR>
 nnoremap <C-p> :Files<CR>
 nnoremap <C-]> :Ag<CR>
-nnoremap <leader>s :call fzf#vim#files(expand("%:p:h"), fzf#vim#with_preview({'options': ['--layout=reverse', '--info=inline', '--preview-window=right:50%:wrap']}))<CR>
 nnoremap <C-n> :Buffers<CR>
 nnoremap <C-t> :Tags<CR>
 
@@ -126,26 +122,31 @@ nnoremap Y y$
 nnoremap <leader>w :w<CR>
 nnoremap <leader>q :q<CR>
 nnoremap <leader>t :term<CR>
-nnoremap <leader>e :Lexplore<CR>
 nnoremap <leader>h :nohlsearch<CR>
-nnoremap <leader>jb "zy3w:exe "! jira browse ".@z.""<CR>
-nnoremap <leader>jv "zy3w:exe "! jira view ".@z.""<CR>
-nnoremap <leader>i :setlocal autoread<CR> :!goimports -w %<CR><CR>
-nnoremap <leader>f :setlocal autoread<CR> :!go fmt %<CR><CR>
-nnoremap <leader>b :setlocal autoread<CR> :!black %<CR><CR>
 nnoremap <leader>c :copen<CR>
-nnoremap <leader>l :LspHover<CR>
-nnoremap <leader>d :LspDefinition<CR>
-nnoremap <leader>g :LspReferences<CR>
-nnoremap <leader>n :LspNextError<CR>
-nnoremap <leader>N :LspPreviousError<CR>
 nnoremap <leader>x :bdelete<CR>
 nnoremap <leader>u :SignifyHunkUndo<CR>
-nnoremap <leader>ss :mksession! ~/.vimsessions/
-nnoremap <leader>sl :source ~/.vimsessions/
-nnoremap <leader>vp :VimuxPromptCommand<CR>
-nnoremap <leader>vl :VimuxRunLastCommand<CR>
+
+nnoremap <leader>e :Lexplore<CR>
+nnoremap <leader>ed :execute 'Lexplore' expand("%:p:h")<CR>
+
+nnoremap <leader>fb :setlocal autoread<CR> :!black %<CR><CR>
+nnoremap <leader>fg :setlocal autoread<CR> :!go fmt %<CR><CR>
+nnoremap <leader>fi :setlocal autoread<CR> :!goimports -w %<CR><CR>
+
+nnoremap <leader>gb :Gblame<CR>
+nnoremap <leader>gd :Gvdiffsplit<CR>
+nnoremap <leader>gl :Commits<CR>
+
+nnoremap <leader>ld :LspDefinition<CR>
+nnoremap <leader>lg :LspReferences<CR>
+nnoremap <leader>lh :LspHover<CR>
+nnoremap <leader>ln :LspNextError<CR>
+nnoremap <leader>lp :LspPreviousError<CR>
+
 nnoremap <leader>vi :VimuxInspectRunner<CR>
+nnoremap <leader>vl :VimuxRunLastCommand<CR>
+nnoremap <leader>vp :VimuxPromptCommand<CR>
 
 inoremap jk <esc>
 inoremap <C-e> <C-o>$
@@ -216,3 +217,12 @@ let g:lsp_diagnostics_enabled = 1
 let g:lsp_diagnostics_echo_cursor = 1
 let g:lsp_diagnostics_signs_enabled = 0
 let g:lsp_diagnostics_highlights_enabled = 1
+
+autocmd User SignifyHunk call s:show_current_hunk()
+
+function! s:show_current_hunk() abort
+    let h = sy#util#get_hunk_stats()
+    if !empty(h)
+    echo printf('[Hunk %d/%d]', h.current_hunk, h.total_hunks)
+    endif
+endfunction
