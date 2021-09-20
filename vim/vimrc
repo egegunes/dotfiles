@@ -6,19 +6,19 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 
+Plugin 'jpalardy/vim-slime'
+Plugin 'junegunn/fzf.vim'
+Plugin 'mattn/vim-lsp-settings'
+Plugin 'mhinz/vim-signify'
+Plugin 'prabirshrestha/asyncomplete-lsp.vim'
+Plugin 'prabirshrestha/asyncomplete.vim'
+Plugin 'prabirshrestha/vim-lsp'
+Plugin 'preservim/vimux'
+Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-flagship'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-rhubarb'
 Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-commentary'
-Plugin 'tpope/vim-flagship'
-Plugin 'junegunn/fzf.vim'
-Plugin 'jpalardy/vim-slime'
-Plugin 'mhinz/vim-signify'
-Plugin 'prabirshrestha/vim-lsp'
-Plugin 'mattn/vim-lsp-settings'
-Plugin 'prabirshrestha/asyncomplete.vim'
-Plugin 'prabirshrestha/asyncomplete-lsp.vim'
-Plugin 'preservim/vimux'
 
 call vundle#end()
 
@@ -167,19 +167,6 @@ endfunction
 
 nnoremap <leader>r :call ToggleWrap()<CR>
 
-function! CopyMode()
-    setlocal nonumber
-    setlocal norelativenumber
-    :SignifyDisableAll
-endfunction
-function! EndCopyMode()
-    setlocal number
-    setlocal relativenumber
-    :SignifyEnableAll
-endfunction
-command CopyMode call CopyMode()
-command EndCopyMode call EndCopyMode()
-
 let g:fzf_layout = {'up':'~90%', 'window': { 'width': 1, 'height': 1,'yoffset':0.5,'xoffset': 0.5, 'highlight': 'Todo', 'border': 'sharp' } }
 let g:fzf_preview_window = 'up:50%'
 
@@ -191,38 +178,8 @@ let g:slime_python_ipython = 1
 autocmd BufRead * syntax off
 autocmd FileType diff,git syntax on
 
-function! TempFile()
-    let l:tmpfile = tempname()
-    execute "write " . l:tmpfile
-endfunction
-command TempFile call TempFile()
-
-let g:notes_path = "~/Documents/notes/"
-function! Note()
-    let l:filename = strftime("%s")
-    execute "put =strftime('%a %b %d, %Y  %H:%M')"
-    execute 'normal ggddpO'
-    execute "write " . g:notes_path . l:filename . ".txt"
-endfunction
-command Note call Note()
-
-function! Delete()
-    execute "!rm %"
-    execute "quit"
-endfunction
-command Delete call Delete()
-
 let g:lsp_document_highlight_enabled = 0
 let g:lsp_diagnostics_enabled = 1
 let g:lsp_diagnostics_echo_cursor = 1
 let g:lsp_diagnostics_signs_enabled = 0
 let g:lsp_diagnostics_highlights_enabled = 1
-
-autocmd User SignifyHunk call s:show_current_hunk()
-
-function! s:show_current_hunk() abort
-    let h = sy#util#get_hunk_stats()
-    if !empty(h)
-    echo printf('[Hunk %d/%d]', h.current_hunk, h.total_hunks)
-    endif
-endfunction
