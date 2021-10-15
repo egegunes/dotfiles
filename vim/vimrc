@@ -8,6 +8,7 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'jpalardy/vim-slime'
 Plugin 'junegunn/fzf.vim'
+Plugin 'junegunn/gv.vim'
 Plugin 'mattn/vim-lsp-settings'
 Plugin 'mhinz/vim-signify'
 Plugin 'prabirshrestha/asyncomplete-lsp.vim'
@@ -59,9 +60,9 @@ highlight LspWarningHighlight ctermbg=black ctermfg=yellow
 highlight LspInformationHighlight ctermbg=black ctermfg=blue
 highlight LspHintHighlight ctermbg=black ctermfg=gray
 
+syntax on
 filetype plugin on
 filetype indent off
-syntax off
 set backspace=eol,indent,start  "allow backspacing over everything in insert mode
 set history=1000                "store lots of :cmdline history
 set showcmd                     "show incomplete cmds down the bottom
@@ -134,9 +135,10 @@ nnoremap <leader>fb :setlocal autoread<CR> :!black %<CR><CR>
 nnoremap <leader>fg :setlocal autoread<CR> :!go fmt %<CR><CR>
 nnoremap <leader>fi :setlocal autoread<CR> :!goimports -w %<CR><CR>
 
-nnoremap <leader>gb :Gblame<CR>
+nnoremap <leader>gb :Git blame<CR>
 nnoremap <leader>gd :Gvdiffsplit<CR>
-nnoremap <leader>gl :Commits<CR>
+nnoremap <leader>gl :GV<CR>
+nnoremap <leader>gc :GV!<CR>
 
 nnoremap <leader>ld :LspDefinition<CR>
 nnoremap <leader>lg :LspReferences<CR>
@@ -147,6 +149,9 @@ nnoremap <leader>lp :LspPreviousError<CR>
 nnoremap <leader>vi :VimuxInspectRunner<CR>
 nnoremap <leader>vl :VimuxRunLastCommand<CR>
 nnoremap <leader>vp :VimuxPromptCommand<CR>
+
+nnoremap <C-j> :lnext<CR>
+nnoremap <C-k> :lprev<CR>
 
 inoremap jk <esc>
 inoremap <C-e> <C-o>$
@@ -174,9 +179,6 @@ let g:slime_target = "tmux"
 let g:slime_paste_file = "$HOME/.slime_paste"
 let g:slime_default_config = {"socket_name": "default", "target_pane": ":.1"}
 let g:slime_python_ipython = 1
-
-autocmd BufRead * syntax off
-autocmd FileType diff,git syntax on
 
 let g:lsp_document_highlight_enabled = 0
 let g:lsp_diagnostics_enabled = 1
