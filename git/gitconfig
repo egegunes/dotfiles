@@ -19,6 +19,10 @@
     head = "!exec $EDITOR $(git diff-tree --no-commit-id --name-only -r HEAD)"
     wip = "!$EDITOR $(git ls-files -m)"
     wc = whatchanged -p --abbrev-commit --pretty=medium
+    files = !git diff --name-only $(git merge-base HEAD \"${REVIEW_BASE}\")
+    stat = !git diff --stat $(git merge-base HEAD \"${REVIEW_BASE}\")
+    review = !git diff $(git merge-base HEAD \"${REVIEW_BASE}\")
+    review-vim = !vim -p $(git files) +\"tabdo Gvdiffsplit $REVIEW_BASE\"
 
 [status]
     showUntrackedFiles = all
