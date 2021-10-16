@@ -60,7 +60,7 @@ highlight LspWarningHighlight ctermbg=black ctermfg=yellow
 highlight LspInformationHighlight ctermbg=black ctermfg=blue
 highlight LspHintHighlight ctermbg=black ctermfg=gray
 
-syntax on
+syntax off
 filetype plugin on
 filetype indent off
 set backspace=eol,indent,start  "allow backspacing over everything in insert mode
@@ -172,6 +172,18 @@ function! ToggleWrap()
 endfunction
 
 nnoremap <leader>r :call ToggleWrap()<CR>
+
+function! ToggleSyntax()
+    if exists("g:syntax_on")
+        syntax off
+    else
+        syntax on
+    endif
+endfunction
+nnoremap <leader>st :call ToggleSyntax()<CR>
+
+autocmd BufRead * syntax off
+autocmd FileType diff,git syntax on
 
 let g:fzf_layout = {'up':'~90%', 'window': { 'width': 1, 'height': 1,'yoffset':0.5,'xoffset': 0.5, 'highlight': 'Todo', 'border': 'sharp' } }
 let g:fzf_preview_window = 'up:50%'
