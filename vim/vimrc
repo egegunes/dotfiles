@@ -16,6 +16,7 @@ Plugin 'prabirshrestha/asyncomplete.vim'
 Plugin 'prabirshrestha/vim-lsp'
 Plugin 'preservim/vimux'
 Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-eunuch'
 Plugin 'tpope/vim-flagship'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-rhubarb'
@@ -187,6 +188,8 @@ autocmd FileType diff,git syntax on
 
 let g:fzf_layout = {'up':'~90%', 'window': { 'width': 1, 'height': 1,'yoffset':0.5,'xoffset': 0.5, 'highlight': 'Todo', 'border': 'sharp' } }
 let g:fzf_preview_window = 'up:50%'
+
+command! -bang -nargs=* Ag call fzf#vim#ag(<q-args>, {'options': '--delimiter : --nth 4..'}, <bang>0)
 
 let g:slime_target = "tmux"
 let g:slime_paste_file = "$HOME/.slime_paste"
