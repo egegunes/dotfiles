@@ -132,11 +132,6 @@ nnoremap <leader>u :SignifyHunkUndo<CR>
 nnoremap <leader>e :Lexplore<CR>
 nnoremap <leader>ed :execute 'Lexplore' expand("%:p:h")<CR>
 
-nnoremap <leader>fb :setlocal autoread<CR> :!black %<CR><CR>
-nnoremap <leader>fs :setlocal autoread<CR> :!isort %<CR><CR>
-nnoremap <leader>fg :setlocal autoread<CR> :!go fmt %<CR><CR>
-nnoremap <leader>fi :setlocal autoread<CR> :!goimports -w %<CR><CR>
-
 nnoremap <leader>gb :Git blame<CR>
 nnoremap <leader>gd :Gvdiffsplit<CR>
 nnoremap <leader>gl :GV<CR>

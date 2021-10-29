@@ -1,2 +1,1 @@
-setlocal makeprg=flake8\ %:S
-setlocal errorformat=%f:%l:%c:\ %t%n\ %m
+nnoremap <leader>f :setlocal autoread<CR> :!black %<CR> :!isort %<CR><CR>
