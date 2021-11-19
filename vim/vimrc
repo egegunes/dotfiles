@@ -92,7 +92,6 @@ set rtp+=/usr/local/opt/fzf
 set autowrite
 set splitright
 set splitbelow
-set laststatus=2
 set showtabline=0
 set background=dark
 set completeopt=longest,menuone
@@ -103,7 +102,7 @@ set cot+=preview
 
 set laststatus=2
 set statusline=
-set statusline+=\ %n
+set statusline+=[%n]
 set statusline+=\ %f
 set statusline+=\ %m
 set statusline+=%=
