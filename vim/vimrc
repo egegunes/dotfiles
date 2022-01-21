@@ -6,11 +6,14 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 
+Plugin 'Yggdroot/indentLine'
 Plugin 'jpalardy/vim-slime'
 Plugin 'junegunn/fzf.vim'
 Plugin 'junegunn/gv.vim'
 Plugin 'mattn/vim-lsp-settings'
 Plugin 'mhinz/vim-signify'
+Plugin 'nathangrigg/vim-beancount'
+Plugin 'pechorin/any-jump.vim'
 Plugin 'prabirshrestha/asyncomplete-lsp.vim'
 Plugin 'prabirshrestha/asyncomplete.vim'
 Plugin 'prabirshrestha/vim-lsp'
@@ -23,42 +26,43 @@ Plugin 'tpope/vim-surround'
 
 call vundle#end()
 
-highlight Normal ctermbg=black ctermfg=white
-highlight LineNr ctermbg=black ctermfg=white
-highlight CursorLineNr ctermbg=black ctermfg=yellow
-highlight StatusLine ctermbg=black ctermfg=white
-highlight Pmenu ctermbg=black ctermfg=yellow
-highlight PmenuSel ctermbg=yellow ctermfg=black
-highlight Visual ctermbg=yellow ctermfg=black
-highlight DiffAdd ctermbg=black ctermfg=green
-highlight DiffChange ctermbg=black ctermfg=yellow
-highlight DiffDelete ctermbg=black ctermfg=red
-highlight diffAdded ctermbg=black ctermfg=green
-highlight diffRemoved ctermbg=black ctermfg=red
-highlight diffChanged ctermbg=black ctermfg=yellow
-highlight diffFile ctermbg=black ctermfg=lightblue
-highlight diffOldFile ctermbg=black ctermfg=magenta
-highlight ColorColumn ctermbg=grey
-highlight SignColumn ctermbg=black
-highlight markdownCodeDelimiter ctermbg=black ctermfg=red
-highlight markdownHeadingDelimiter ctermbg=black ctermfg=red
-highlight markdownH1 ctermbg=black ctermfg=red
-highlight markdownH2 ctermbg=black ctermfg=red
-highlight markdownH3 ctermbg=black ctermfg=red
-highlight markdownH4 ctermbg=black ctermfg=red
-highlight markdownH5 ctermbg=black ctermfg=red
-highlight markdownH6 ctermbg=black ctermfg=red
-highlight ExtraWhitespace ctermbg=red ctermbg=red
+highlight Normal                    ctermbg=black   ctermfg=white
+highlight LineNr                    ctermbg=black   ctermfg=white
+highlight CursorLineNr              ctermbg=black   ctermfg=yellow
+highlight StatusLine                ctermbg=black   ctermfg=white
+highlight Pmenu                     ctermbg=black   ctermfg=yellow
+highlight PmenuSel                  ctermbg=yellow  ctermfg=black
+highlight PmenuThumb                ctermbg=yellow  ctermfg=black
+highlight Visual                    ctermbg=yellow  ctermfg=black
+highlight DiffAdd                   ctermbg=black   ctermfg=green
+highlight DiffChange                ctermbg=black   ctermfg=yellow
+highlight DiffDelete                ctermbg=black   ctermfg=red
+highlight diffAdded                 ctermbg=black   ctermfg=green
+highlight diffRemoved               ctermbg=black   ctermfg=red
+highlight diffChanged               ctermbg=black   ctermfg=yellow
+highlight diffFile                  ctermbg=black   ctermfg=lightblue
+highlight diffOldFile               ctermbg=black   ctermfg=magenta
+highlight ColorColumn               ctermbg=grey
+highlight SignColumn                ctermbg=black
+highlight markdownCodeDelimiter     ctermbg=black   ctermfg=red
+highlight markdownHeadingDelimiter  ctermbg=black   ctermfg=red
+highlight markdownH1                ctermbg=black   ctermfg=red
+highlight markdownH2                ctermbg=black   ctermfg=red
+highlight markdownH3                ctermbg=black   ctermfg=red
+highlight markdownH4                ctermbg=black   ctermfg=red
+highlight markdownH5                ctermbg=black   ctermfg=red
+highlight markdownH6                ctermbg=black   ctermfg=red
+highlight SpellBad                  ctermbg=red     ctermfg=black
+highlight SpellRare                 ctermbg=yellow  ctermfg=black
+highlight LspErrorHighlight         ctermbg=black   ctermfg=red
+highlight LspWarningHighlight       ctermbg=black   ctermfg=yellow
+highlight LspInformationHighlight   ctermbg=black   ctermfg=blue
+highlight LspHintHighlight          ctermbg=black   ctermfg=gray
+highlight ExtraWhitespace           ctermbg=red     ctermbg=red
 match ExtraWhitespace /\s\+$/
+
 autocmd InsertEnter * highlight StatusLine ctermbg=black ctermfg=yellow
 autocmd InsertLeave * highlight StatusLine ctermbg=black ctermfg=white
-highlight SpellBad ctermbg=red ctermfg=black
-highlight SpellRare ctermbg=yellow ctermfg=black
-highlight PopupWindow ctermbg=lightblue guibg=lightblue
-highlight LspErrorHighlight ctermbg=black ctermfg=red
-highlight LspWarningHighlight ctermbg=black ctermfg=yellow
-highlight LspInformationHighlight ctermbg=black ctermfg=blue
-highlight LspHintHighlight ctermbg=black ctermfg=gray
 
 syntax off
 filetype plugin on
